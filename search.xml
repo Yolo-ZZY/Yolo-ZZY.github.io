@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>继续butterfly</title>
+      <link href="/2024/12/29/%E7%BB%A7%E7%BB%ADbutterfly/"/>
+      <url>/2024/12/29/%E7%BB%A7%E7%BB%ADbutterfly/</url>
+      
+        <content type="html"><![CDATA[<h1 id="继续butterfly"><a href="#继续butterfly" class="headerlink" title="继续butterfly"></a>继续butterfly</h1><p>上瘾了继续搞</p><blockquote><p>记录如何在github上用vscode看源码:</p><ol><li>.在线vscode：仓库详情界面按下“。”键</li><li>在线运行项目 在项目地址前加上<code>gitpod.io/#/</code>前缀 登陆： 加载： 运行</li></ol></blockquote><h2 id="本地搜索系统"><a href="#本地搜索系统" class="headerlink" title="本地搜索系统"></a>本地搜索系统</h2><ol><li>安装依赖：前往博客根目录，打开cmd命令窗口执行</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure><ol start="2"><li>注入配置</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  content: <span class="literal">true</span></span><br></pre></td></tr></table></figure><ol start="3"><li>主题yml中</li></ol><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">local_search:</span></span><br><span class="line"><span class="bullet">-</span>  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="string">+</span>  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure><p>重新编译运行即可</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo generate</span><br></pre></td></tr></table></figure><h2 id="解决spwanfailed"><a href="#解决spwanfailed" class="headerlink" title="解决spwanfailed"></a>解决spwanfailed</h2><ol><li><p>Githhub</p></li><li><p>setting</p></li><li><p>email,这个不要勾选</p><p><img src="C:\Users\yolo\AppData\Roaming\Typora\typora-user-images\image-20241229141814594.png" alt="image-20241229141814594"></p></li></ol><h2 id="首页中tag，categories等问题"><a href="#首页中tag，categories等问题" class="headerlink" title="首页中tag，categories等问题"></a>首页中tag，categories等问题</h2><p>参考</p><blockquote><ol><li><a href="https://www.jianshu.com/p/e17711e44e00">Hexo使用攻略-添加分类及标签 - 简书</a></li><li><a href="https://www.cnblogs.com/an-shiguang/p/18269048#_label3_0_1_6">https://www.cnblogs.com/an-shiguang/p/18269048#_label3_0_1_6</a></li></ol></blockquote><p>1.打开命令行，进入博客所在文件夹。执行命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure><p>2.将index.md中添加</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type: &quot;tags&quot;        #注意是type，不是tag</span><br><span class="line">type: &quot;categories&quot;</span><br></pre></td></tr></table></figure><p>3.为博客文章添加tag、categories</p><h2 id="配置hexo-butterfly-categories-card"><a href="#配置hexo-butterfly-categories-card" class="headerlink" title="配置hexo-butterfly-categories-card"></a>配置hexo-butterfly-categories-card</h2><p>参考链接</p><blockquote><p><a href="https://akilar.top/posts/a9131002/">https://akilar.top/posts/a9131002/</a><br>代码应放在站点yml文件中</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> butterfly </tag>
+            
+            <tag> hexo </tag>
+            
+            <tag> Github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于butterfly</title>
       <link href="/2024/12/28/%E5%85%B3%E4%BA%8Ebutterfly/"/>
       <url>/2024/12/28/%E5%85%B3%E4%BA%8Ebutterfly/</url>

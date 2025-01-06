@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>年末小结</title>
+      <link href="/2024/12/30/%E5%B9%B4%E6%9C%AB%E5%B0%8F%E7%BB%93/"/>
+      <url>/2024/12/30/%E5%B9%B4%E6%9C%AB%E5%B0%8F%E7%BB%93/</url>
+      
+        <content type="html"><![CDATA[<h1 id="2024年年末小结"><a href="#2024年年末小结" class="headerlink" title="2024年年末小结"></a>2024年年末小结</h1><p>额，想把博客同时部署到github和腾讯云时，才发现出bug了。。。:(  :joy:<br>我登录腾讯云一直还是用账号密码登录，我起初没在意，原来只是ssh密钥压根就没设置，但今年没时间了，等明年吧。。。:0 :cry: :sob:</p><p>这两天回老家，暂时搞不了，可能要元旦结束才能继续吧。立个小目标，一直保持到过年，要加大对于leetcode和那个傻呗毕设的投入了，服了。。。（** 但我不会忘记初心的，狠学C++!!! ** )   :sunglasses:</p><p>剩下好像没啥了，（其实今晚上感慨挺多的，一时提笔忘字）既然没想起来，说明还不是很重要，joy。。。明天还要早起，睡觉！</p><p>人真是麻烦的东西，想要吃，又怕胖；想要玩，又想睡；想要摆，又想上进。。。突然想到懒羊羊了，hhh<br>哦我想起来说啥了，</p><h2 id="1-吐槽毕设，高校"><a href="#1-吐槽毕设，高校" class="headerlink" title="1. 吐槽毕设，高校"></a>1. 吐槽毕设，高校</h2><p>傻逼玩意，我现在才知道高校里面喜欢搞的深度学习啊，机器视觉啊，除非985、211 ,不然超卷<br>C++能做后端，但是好像也很卷，哎？我是不是可以考虑java的后端<br>我那个毕设题目，基于机器学习的sdn负载均衡，是不是又要搞sdn，又要搞机器学习啊。。。你还是搞死我把，如果没有现成的代码，我可以godie了。</p><h2 id="2-节选自《邪不压正》"><a href="#2-节选自《邪不压正》" class="headerlink" title="2. 节选自《邪不压正》"></a>2. 节选自《邪不压正》</h2><blockquote><p>廖：老蒋？<br>姜：更靠不住。<br>廖：一个写日记的人？<br>姜：正经人谁写日记啊？<br>廖：是啊。<br>姜：你写日记吗？<br>廖：我不写。你写日记吗？<br>姜：谁能把心里话写日记里？<br>廖：写出来的那能叫心里话？<br>（合，碰杯）：下贱！</p></blockquote><p><font color="red"><strong>正经人谁写日记啊</strong></font></p><p>:satisfied::satisfied::satisfied::satisfied::satisfied::satisfied:</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随手一写 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随手一写 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo博客同时部署到 GitHub Page 和个人服务器</title>
+      <link href="/2024/12/30/Hexo-%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%97%B6%E9%83%A8%E7%BD%B2%E5%88%B0-GitHub-Page-%E5%92%8C%E4%B8%AA%E4%BA%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <url>/2024/12/30/Hexo-%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%97%B6%E9%83%A8%E7%BD%B2%E5%88%B0-GitHub-Page-%E5%92%8C%E4%B8%AA%E4%BA%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Hexo-博客同时部署到-GitHub-Page-和个人服务器"><a href="#Hexo-博客同时部署到-GitHub-Page-和个人服务器" class="headerlink" title="Hexo 博客同时部署到 GitHub Page 和个人服务器"></a>Hexo 博客同时部署到 GitHub Page 和个人服务器</h1><p>将本地yml中repo改为两个，测试能否实现同时部署两个网站</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>尝试把博客部署在腾讯云上</title>
+      <link href="/2024/12/30/%E5%B0%9D%E8%AF%95%E6%8A%8A%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%9C%A8%E8%85%BE%E8%AE%AF%E4%BA%91%E4%B8%8A/"/>
+      <url>/2024/12/30/%E5%B0%9D%E8%AF%95%E6%8A%8A%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%9C%A8%E8%85%BE%E8%AE%AF%E4%BA%91%E4%B8%8A/</url>
+      
+        <content type="html"><![CDATA[<h1 id="把自己的博客部署在服务器上"><a href="#把自己的博客部署在服务器上" class="headerlink" title="把自己的博客部署在服务器上"></a>把自己的博客部署在服务器上</h1><ol><li>画69买了一年，第一次买服务器。。。应该不会踩坑吧，但愿！</li><li>傻逼服务器，我感觉是腾讯云装的Ubuntu有问题，yum命令死活用不了，换成centos就好了。。。</li><li>参考<a href="https://lneverl.github.io/posts/2092ec56.html">https://lneverl.github.io/posts/2092ec56.html</a><br>b站也有视频讲解很赞</li></ol><hr><p>#预备软件：1. Xshell（这个无所谓，在命令行隶属都行） </p><p>​  2. WinSCP（这个最好下一下，可视化linux文件目录，也可以直接修改里面的文件，不用vim）</p><hr><h1 id="1-开始安装nginx"><a href="#1-开始安装nginx" class="headerlink" title="1. 开始安装nginx"></a>1. 开始安装nginx</h1><p>   安装ngin需要相关的依赖库，我们先进行库的安装。</p><h2 id="1-1-安装gcc-gcc-c"><a href="#1-1-安装gcc-gcc-c" class="headerlink" title="1.1  安装gcc gcc-c++"></a>1.1  安装gcc gcc-c++</h2>   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install -y gcc gcc-c++</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="1-2-安装PCRE库"><a href="#1-2-安装PCRE库" class="headerlink" title="1.2 安装PCRE库"></a>1.2 安装PCRE库</h3>   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">cd /usr/local/</span><br><span class="line">    </span><br><span class="line">wget http://downloads.sourceforge.net/project/pcre/pcre/8.45/pcre-8.45.tar.gz</span><br><span class="line"></span><br><span class="line">tar -xvf pcre-8.45.tar.gz</span><br><span class="line"></span><br><span class="line">cd pcre-8.45</span><br><span class="line"></span><br><span class="line">./configure</span><br><span class="line"></span><br><span class="line">make &amp;&amp; make install</span><br><span class="line"></span><br><span class="line">pcre-config --version</span><br></pre></td></tr></table></figure><p>​        </p><h3 id="1-3-安装nginx"><a href="#1-3-安装nginx" class="headerlink" title="1.3  安装nginx"></a>1.3  安装nginx</h3> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">    </span><br><span class="line">cd /usr/local/</span><br><span class="line">    </span><br><span class="line">wget http://nginx.org/download/nginx-1.17.9.tar.gz</span><br><span class="line">    </span><br><span class="line">tar -xvf nginx-1.17.9.tar.gz</span><br><span class="line">    </span><br><span class="line">cd nginx-1.17.9</span><br><span class="line">    </span><br><span class="line">./configure</span><br><span class="line">    </span><br><span class="line">make &amp;&amp; make install </span><br></pre></td></tr></table></figure> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx   //启动ngnix</span><br></pre></td></tr></table></figure><p>​<br>​        <strong>这步完成就可以用公网ip访问了</strong><br>​        </p><h3 id="1-4-保障80端口开放"><a href="#1-4-保障80端口开放" class="headerlink" title="1.4 保障80端口开放"></a>1.4 保障80端口开放</h3><hr><h2 id="2-安装Git以及Node-js"><a href="#2-安装Git以及Node-js" class="headerlink" title="2. 安装Git以及Node.js"></a>2. 安装Git以及Node.js</h2><h3 id="2-1-安装Node-js"><a href="#2-1-安装Node-js" class="headerlink" title="2.1 安装Node.js"></a>2.1 安装Node.js</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install -y nodejs</span><br><span class="line">yum install npm</span><br><span class="line"></span><br></pre></td></tr></table></figure><hr><h3 id="2-2-安装git及新建git用户"><a href="#2-2-安装git及新建git用户" class="headerlink" title="2.2  安装git及新建git用户"></a>2.2  安装git及新建git用户</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">yum install git</span><br><span class="line"></span><br><span class="line">adduser git</span><br><span class="line"></span><br><span class="line">chmod 740 /etc/sudoers</span><br><span class="line"></span><br><span class="line">vi /etc/sudoers  //vim 里面添加git ALL=(ALL) ALL，i插入，esc退出插入，：wq保存//退出，也可以用winscp直接可视化操作</span><br></pre></td></tr></table></figure><p>编辑完,更改文件权限</p><p>‘’’ </p><p>chmod 400 &#x2F;etc&#x2F;sudoers</p><p>sudo passwd git</p><p>‘’’</p><h3 id="2-3-切换git用户并且建立密钥"><a href="#2-3-切换git用户并且建立密钥" class="headerlink" title="2.3   切换git用户并且建立密钥"></a>2.3   切换git用户并且建立密钥</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">su git</span><br><span class="line"> </span><br><span class="line"> cd ~</span><br><span class="line"> </span><br><span class="line"> mkdir .ssh</span><br><span class="line"> </span><br><span class="line"> cd .ssh</span><br><span class="line"> </span><br><span class="line"> vi authorized_keys   //此处将ssh  pub公钥粘贴进这个文本</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx   //启动ngnix</span><br></pre></td></tr></table></figure><p><del>我nm，为什么这里是usr，网上那么多是user，查了我半天。。。还有nginx按别按错目录了，我现在里面有两个nginx，根本不敢删hh</del></p><h3 id="2-4-创建git仓库"><a href="#2-4-创建git仓库" class="headerlink" title="2.4 创建git仓库"></a>2.4 创建git仓库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br><span class="line"></span><br><span class="line">git init --bare blog.git</span><br><span class="line"></span><br><span class="line">vi ~/blog.git/hooks/post-receive  </span><br><span class="line"></span><br></pre></td></tr></table></figure><p>输入的是</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --work-tree=/home/www/website --git-dir=/home/git/blog.git checkout -f</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x ~/blog.git/hooks/post-receive</span><br></pre></td></tr></table></figure><h3 id="2-5-新建-home-www-website"><a href="#2-5-新建-home-www-website" class="headerlink" title="2.5 新建&#x2F;home&#x2F;www&#x2F;website"></a>2.5 新建&#x2F;home&#x2F;www&#x2F;website</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">su root</span><br><span class="line"></span><br><span class="line">输入密码</span><br><span class="line"></span><br><span class="line">cd /home</span><br><span class="line"></span><br><span class="line">mkdir www</span><br><span class="line"></span><br><span class="line">cd www</span><br><span class="line"></span><br><span class="line">mkdir website</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">chmod 777 /home/www/website</span><br><span class="line"></span><br><span class="line">chmod 777 /home/www</span><br></pre></td></tr></table></figure><h3 id="2-6-cmd中输入"><a href="#2-6-cmd中输入" class="headerlink" title="2.6 cmd中输入"></a>2.6 cmd中输入</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">ssh -v git@服务器的公网ip</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>本地博客config.yml<br>修改 repo: git@这里改为服务器公网IP:&#x2F;home&#x2F;git&#x2F;blog.git</p><hr><h3 id="2-7-修改服务器上"><a href="#2-7-修改服务器上" class="headerlink" title="2.7 修改服务器上"></a>2.7 修改服务器上</h3><p>把&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;中nginx.conf中的root改为，共两个</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/home/www/website</span><br></pre></td></tr></table></figure><hr><h3 id="3-此时已经基本完成了，但还要重启niginx"><a href="#3-此时已经基本完成了，但还要重启niginx" class="headerlink" title="3. 此时已经基本完成了，但还要重启niginx"></a>3. 此时已经基本完成了，但还要重启niginx</h3><hr><h1 id="2-写入重启脚本"><a href="#2-写入重启脚本" class="headerlink" title="2. 写入重启脚本"></a>2. 写入重启脚本</h1><p>用脚本方便些？<br>在&#x2F;etc&#x2F;init.d&#x2F;(<strong>注意</strong>此处init.d是个文件夹)路径下添加脚本文件，名称为nginx，内容如下（不会命令行可以在直接用winscp操作）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#!/bin/bash</span><br><span class="line">#Startup script for the nginx Web Server</span><br><span class="line">#chkconfig: 2345 85 15</span><br><span class="line">nginx=/usr/local/nginx/sbin/nginx</span><br><span class="line">conf=/usr/local/nginx/conf/nginx.conf</span><br><span class="line">case $1 in </span><br><span class="line">start)</span><br><span class="line">echo -n &quot;Starting Nginx&quot;</span><br><span class="line">$nginx -c $conf</span><br><span class="line">echo &quot; done.&quot;</span><br><span class="line">;;</span><br><span class="line">stop)</span><br><span class="line">echo -n &quot;Stopping Nginx&quot;</span><br><span class="line">killall -9 nginx</span><br><span class="line">echo &quot; done.&quot;</span><br><span class="line">;;</span><br><span class="line">test)</span><br><span class="line">$nginx -t -c $conf</span><br><span class="line">echo &quot;Success.&quot;</span><br><span class="line">;;</span><br><span class="line">reload)</span><br><span class="line">echo -n &quot;Reloading Nginx&quot;</span><br><span class="line">ps auxww | grep nginx | grep master | awk &#x27;&#123;print $2&#125;&#x27; | xargs kill -HUP</span><br><span class="line">echo &quot; done.&quot;</span><br><span class="line">;;</span><br><span class="line">restart)</span><br><span class="line">$nginx -s reload</span><br><span class="line">echo &quot;reload done.&quot;</span><br><span class="line">;;</span><br><span class="line">*)</span><br><span class="line">echo &quot;Usage: $0 &#123;start|restart|reload|stop|test|show&#125;&quot;</span><br><span class="line">;;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure><p>然后</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x nginx</span><br></pre></td></tr></table></figure><hr><p>最后记一下3条指令来控制服务器</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">启动service nginx start</span><br><span class="line">停止service nginx stop</span><br><span class="line">重启service nginx reload</span><br></pre></td></tr></table></figure><p>如果以前部署在别的服务器上，记得部署的时候把本地blog文件夹里的部署文件删了.deploy那个文件夹</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 服务器 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 服务器 </tag>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于hexo+typora博客图片上传问题</title>
+      <link href="/2024/12/30/%E5%85%B3%E4%BA%8Ehexo+typora%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E9%97%AE%E9%A2%98/"/>
+      <url>/2024/12/30/%E5%85%B3%E4%BA%8Ehexo+typora%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<h1 id="关于hexo-typora博客图片上传问题"><a href="#关于hexo-typora博客图片上传问题" class="headerlink" title="关于hexo+typora博客图片上传问题"></a>关于hexo+typora博客图片上传问题</h1><p>使用图床</p><ol><li>下载picgo<blockquote><p><a href="https://molunerfinn.com/PicGo/">https://molunerfinn.com/PicGo/</a></p></blockquote></li><li><ol><li>这里我选择SM.MS，听说体验更好<br>  注册登录后，找到API TOKEN,生成后放到app里</li></ol></li></ol><p>  *注意：发现这里由于 sm.ms 图床的域名国内无法访问，sm.ms 官网已经给出解决文案，针对国内用户添加了备用域名：smms.app</p><ol start="2"><li>我顺便把github的图床也搞了看看，感觉这种东西都迟早会遇到问题</li></ol><p>  重新建立一个仓库，生成TOKEN</p><ol start="3"><li><p>在typora里，</p><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20241230101741589.png" alt="image-20241230101741589" style="zoom:50%;" /></li><li><p>typora里有图片后，右键就可以上传了</p></li><li><p>我发现github仓库里图片没有目录，继续摸索</p><p><a href="https://blog.csdn.net/scdnplayer/article/details/116380432">typora picgo gitee 按年月日分类上传图片_picgo文件分类上传-CSDN博客</a></p><p>额，能改，但没必要，上传图片已经重命名了，决不是我懒</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++学习-1编译链接原理</title>
+      <link href="/2024/12/29/C/"/>
+      <url>/2024/12/29/C/</url>
+      
+        <content type="html"><![CDATA[<h1 id="编译链接原理"><a href="#编译链接原理" class="headerlink" title="编译链接原理"></a>编译链接原理</h1><h2 id="1-预编译"><a href="#1-预编译" class="headerlink" title="1.预编译"></a>1.预编译</h2><p>开头的命令</p><p>注意以下代码&#x3D;&#x3D;不是&#x3D;&#x3D;预编译</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> lib             <span class="comment">//链接库 链接阶段，为链接器提供东西</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> link<span class="comment">//main为一般入口函数， 改变入口函数</span></span></span><br></pre></td></tr></table></figure><hr><h2 id="2-编译"><a href="#2-编译" class="headerlink" title="2.编译"></a>2.编译</h2><p><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20241229154454330.png" alt="image-20241229154454330"></p><h2 id="3-汇编"><a href="#3-汇编" class="headerlink" title="3.汇编"></a>3.汇编</h2><p> x86 ATA  生成.o</p><hr><h2 id="4-链接："><a href="#4-链接：" class="headerlink" title="4.链接："></a>4.链接：</h2><p><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20241229155506604.png" alt="image-20241229155506604"></p><p>符号解析</p><p>符号的重定位 <em>核心</em></p><p><font color=red><strong>链接主要是将.o文件重定位</strong></font></p><p>查看.o文件详细信息，.o可重定位，不可执行</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">objdump   -t main.o</span><br></pre></td></tr></table></figure><p>查看.o文件符号</p><p><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20241229161345141.png" alt="image-20241229161345141"></p><p>以上代码，gdata sum为引用，但是二者都在.o文件中产生了符号</p><p><img src="/C.assets/image-20241229161551400.png" alt="image-20241229161551400"></p><ol><li>main –text 在代码段</li></ol><p>​ data  –data 在数据段</p><p>​         <u> gdata、sum– &#x3D;&#x3D;UND&#x3D;&#x3D;  引用</u></p><ol start="2"><li><p>第二列 l：loca l；g：global</p><pre><code>    链接时链接器只能看见g，静态变量是l，</code></pre></li></ol><hr><p><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20241229162259209.png" alt="image-20241229162259209"></p><p>sum 和形参一起生成符号</p><hr><p>.o文件组成：</p><p>elf文件头   每个段一个文件头</p><p>text</p><p>data</p><p>bss</p><p>symbal</p><p>section table</p><p>编译过程中符号不分配地址</p><p><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20241229162957864.png" alt="image-20241229162957864"></p><p>注意到 data、gdata 地址都为0</p><hr><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>各个段进行合并  .text&lt;&#x3D;&gt;.text</p><p>对符号的引用（UND） 换成定义 （在其他段寻找) ，且只允许找到一个定义（符号重定义)</p><p>符号解析成功后，给所有符号&#x3D;&#x3D;分配虚拟地址&#x3D;&#x3D;。  符号的重定向</p><p>链接完，成exe&#x2F;out 可重定向&#x3D;》可执行</p><hr><h3 id="可执行文件"><a href="#可执行文件" class="headerlink" title="可执行文件"></a>可执行文件</h3><p>有program headers </p><p>内容：两个load，把代码段、数据段 加载到内存，其他不用加载到内存</p><p><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20241229165246968.png" alt="image-20241229165246968"></p><p>我408也没白学哈哈哈呜呜</p><hr><hr><h1 id="指令角度掌握函数调用过程"><a href="#指令角度掌握函数调用过程" class="headerlink" title="指令角度掌握函数调用过程"></a>指令角度掌握函数调用过程</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;pch.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">sum</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//push ebp 保存此时栈底(main)</span></span><br><span class="line">    <span class="comment">//mov ebp,esp  </span></span><br><span class="line">    <span class="comment">//sub esp,4CH 为sum开辟空间 </span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="type">int</span> temp = <span class="number">0</span>;   <span class="comment">//mov dword ptr[ebp-4],0</span></span><br><span class="line">temp = a + b;<span class="comment">//mov eax,dword ptr[ebp+0CH]</span></span><br><span class="line">    <span class="comment">//add eax,dword ptr[ebp+8]  a+b</span></span><br><span class="line">    <span class="comment">//mov dword ptr[ebp-4],eax</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">return</span> temp;<span class="comment">//mov eax,dword ptr[ebp-4]</span></span><br><span class="line">&#125;<span class="comment">//mov esp,ebp;  回退栈帧，但数据并没有清理</span></span><br><span class="line"><span class="comment">//pop ebp  找回main 的栈底</span></span><br><span class="line"><span class="comment">//ret:出栈 （下一条指令地址给pc）</span></span><br><span class="line"><span class="comment">//回到main下一条指令</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> a = <span class="number">10</span>;<span class="comment">//mov dword ptr[ebp-4], 0Ah</span></span><br><span class="line"><span class="type">int</span> b = <span class="number">20</span>;<span class="comment">//mov dword ptr[ebp-8], 14h</span></span><br><span class="line"><span class="type">int</span> ret=<span class="built_in">sum</span>(a, b); <span class="comment">//main调用sum完，如何回来？</span></span><br><span class="line">    <span class="comment">//1.压栈 b 从右边开始  mov eax,dowrd ptr[ebp-4]</span></span><br><span class="line">    <span class="comment">//                   push eax</span></span><br><span class="line">    <span class="comment">//                   mov eax,dowrd ptr[ebp-8]</span></span><br><span class="line"><span class="comment">//                   push eax</span></span><br><span class="line">    <span class="comment">//                   call sum  :去执行sum了</span></span><br><span class="line">    <span class="comment">//0x08124458 add esp,8   下一条指令，esp+8.释放ab两个形参</span></span><br><span class="line">    <span class="comment">// mov dword ptr[ebp-0ch],eax    eax=30</span></span><br><span class="line">    <span class="comment">//eax--&lt;=4 ;eax+edx---&lt;=8;&gt;8产生临时量带出返回值</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">cout &lt;&lt; <span class="string">&quot;ret:&quot;</span> &lt;&lt; ret &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="main调用sum后，如何回来？"><a href="#main调用sum后，如何回来？" class="headerlink" title="main调用sum后，如何回来？"></a>main调用sum后，如何回来？</h3><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20241229174349632.png" alt="image-20241229174349632" style="zoom:50%;" /><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20241229174314915.png" alt="image-20241229174314915" style="zoom:50%;" />]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于hexo d时spawn failed</title>
+      <link href="/2024/12/29/%E5%85%B3%E4%BA%8Ehexo-d%E6%97%B6spawn-failed/"/>
+      <url>/2024/12/29/%E5%85%B3%E4%BA%8Ehexo-d%E6%97%B6spawn-failed/</url>
+      
+        <content type="html"><![CDATA[<p>参考链接</p><blockquote><p>[<a href="https://blog.csdn.net/2303_79611263/article/details/140346864">最全]解决将Hexo部署到GitHub时报错：Error: Spawn failed_hexo无法部署到github-CSDN博客</a></p></blockquote><p><em>但是，个人觉得&#x3D;&#x3D;网络问题&#x3D;&#x3D;，最好的办法5min再来吧</em></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> bug </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>继续butterfly</title>
+      <link href="/2024/12/29/%E7%BB%A7%E7%BB%ADbutterfly/"/>
+      <url>/2024/12/29/%E7%BB%A7%E7%BB%ADbutterfly/</url>
+      
+        <content type="html"><![CDATA[<h1 id="继续butterfly"><a href="#继续butterfly" class="headerlink" title="继续butterfly"></a>继续butterfly</h1><p>上瘾了继续搞</p><blockquote><p>记录如何在github上用vscode看源码:</p><ol><li>.在线vscode：仓库详情界面按下“。”键</li><li>在线运行项目 在项目地址前加上<code>gitpod.io/#/</code>前缀 登陆： 加载： 运行</li></ol></blockquote><h2 id="本地搜索系统"><a href="#本地搜索系统" class="headerlink" title="本地搜索系统"></a>本地搜索系统</h2><ol><li>安装依赖：前往博客根目录，打开cmd命令窗口执行</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure><ol start="2"><li>注入配置</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  content: <span class="literal">true</span></span><br></pre></td></tr></table></figure><ol start="3"><li>主题yml中</li></ol><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">local_search:</span></span><br><span class="line"><span class="bullet">-</span>  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="string">+</span>  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure><p>重新编译运行即可</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo generate</span><br></pre></td></tr></table></figure><h2 id="解决spwanfailed"><a href="#解决spwanfailed" class="headerlink" title="解决spwanfailed"></a>解决spwanfailed</h2><ol><li><p>Githhub</p></li><li><p>setting</p></li><li><p>email,这个不要勾选</p><p><img src="C:\Users\yolo\AppData\Roaming\Typora\typora-user-images\image-20241229141814594.png" alt="image-20241229141814594"></p></li></ol><h2 id="首页中tag，categories等问题"><a href="#首页中tag，categories等问题" class="headerlink" title="首页中tag，categories等问题"></a>首页中tag，categories等问题</h2><p>参考</p><blockquote><ol><li><a href="https://www.jianshu.com/p/e17711e44e00">Hexo使用攻略-添加分类及标签 - 简书</a></li><li><a href="https://www.cnblogs.com/an-shiguang/p/18269048#_label3_0_1_6">https://www.cnblogs.com/an-shiguang/p/18269048#_label3_0_1_6</a></li></ol></blockquote><p>1.打开命令行，进入博客所在文件夹。执行命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure><p>2.将index.md中添加</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type: &quot;tags&quot;        #注意是type，不是tag</span><br><span class="line">type: &quot;categories&quot;</span><br></pre></td></tr></table></figure><p>3.为博客文章添加tag、categories</p><h2 id="配置hexo-butterfly-categories-card"><a href="#配置hexo-butterfly-categories-card" class="headerlink" title="配置hexo-butterfly-categories-card"></a>配置hexo-butterfly-categories-card</h2><p>参考链接</p><blockquote><p><a href="https://akilar.top/posts/a9131002/">https://akilar.top/posts/a9131002/</a><br>代码应放在站点yml文件中</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> butterfly </tag>
+            
+            <tag> Github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于butterfly</title>
+      <link href="/2024/12/28/%E5%85%B3%E4%BA%8Ebutterfly/"/>
+      <url>/2024/12/28/%E5%85%B3%E4%BA%8Ebutterfly/</url>
+      
+        <content type="html"><![CDATA[<h1 id="关于butterfly"><a href="#关于butterfly" class="headerlink" title="关于butterfly"></a>关于butterfly</h1><ol><li><blockquote><p>访问 <a href="http://localhost:4000/">http://localhost:4000/</a> ，页面显示<code>extends includes/layout.pug block content include ./includes/mixins/indexPostUI.pug +indexPostUI</code> 。 需要安装运行&#96;</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure></blockquote></li><li><blockquote><p><a href="https://butterfly.js.org/posts/dc584b87/">Butterfly 文檔(二) 主題頁面 | Butterfly</a></p></blockquote></li><li><p>关于markdown换行</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">床前明月光，<span class="language-xml"><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span>疑是地上霜</span><br></pre></td></tr></table></figure></li><li><blockquote><p>关于markdown字体颜色</p><p><a href="https://blog.csdn.net/u012028275/article/details/115445362">【Markdown笔记】设置字体颜色_markdown字体颜色-CSDN博客</a></p></blockquote></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> butterfly </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>记录hexo相关</title>
+      <link href="/2024/12/28/%E8%AE%B0%E5%BD%95hexo%E7%9B%B8%E5%85%B3/"/>
+      <url>/2024/12/28/%E8%AE%B0%E5%BD%95hexo%E7%9B%B8%E5%85%B3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="修改about等界面"><a href="#修改about等界面" class="headerlink" title="#修改about等界面"></a>#修改about等界面</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> butterfly </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>记录创建我的博客</title>
+      <link href="/2024/12/28/%E8%AE%B0%E5%BD%95%E5%88%9B%E5%BB%BA%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
+      <url>/2024/12/28/%E8%AE%B0%E5%BD%95%E5%88%9B%E5%BB%BA%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="记录创建博客"><a href="#记录创建博客" class="headerlink" title="#记录创建博客"></a>#记录创建博客</h1><p>1.链接：<a href="https://pan.baidu.com/s/1lZNI9BbnDl_wzrqU7DAmxA">https://pan.baidu.com/s/1lZNI9BbnDl_wzrqU7DAmxA</a> 提取码：2ez8</p><p>2.<a href="https://blog.csdn.net/qq_58608526/article/details/124652412">Hexo+Github博客搭建教程_hexo github-CSDN博客</a></p><h2 id="npm换源"><a href="#npm换源" class="headerlink" title="##npm换源"></a>##npm换源</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npmmirror.com/</span><br></pre></td></tr></table></figure><h2 id="结语"><a href="#结语" class="headerlink" title="##结语"></a>##结语</h2><p>本想着今天开始痛改前非，狠学C++的，结果搞上这个了。。。搞了一下午，也没学成，明天还要回老家，不知道要多久，不会这是我的开始也是结束吧。。。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> butterfly </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>my-first-blog</title>
+      <link href="/2024/12/28/my-first-blog/"/>
+      <url>/2024/12/28/my-first-blog/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 随手一写 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随手一写 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2024/12/28/hello-world/"/>
+      <url>/2024/12/28/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随手一写 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随手一写 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

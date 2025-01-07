@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>不要在标题里加奇怪的符号</title>
+      <link href="/2025/01/07/%E4%B8%8D%E8%A6%81%E5%9C%A8%E6%A0%87%E9%A2%98%E9%87%8C%E5%8A%A0%E5%A5%87%E6%80%AA%E7%9A%84%E7%AC%A6%E5%8F%B7/"/>
+      <url>/2025/01/07/%E4%B8%8D%E8%A6%81%E5%9C%A8%E6%A0%87%E9%A2%98%E9%87%8C%E5%8A%A0%E5%A5%87%E6%80%AA%E7%9A%84%E7%AC%A6%E5%8F%B7/</url>
+      
+        <content type="html"><![CDATA[<h1 id="不要再标题里加奇怪的符号"><a href="#不要再标题里加奇怪的符号" class="headerlink" title="不要再标题里加奇怪的符号"></a>不要再标题里加奇怪的符号</h1><p>血泪教训</p><p>上一张原本标题名为</p><blockquote><p>关于#include以及多个文件间声明与调用</p></blockquote><p>因为这个#，导致定位不到对应的html文件，网页加载不出来，一直404，排查了我快半小时。。。</p><p>把#删了就好了</p><p>前两次c++倒是没事，怪不得我第一次打c++时候他给我变成c了。</p><p>以后就要cpp来表示了。。。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> bug </tag>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于include以及多个文件间声明与调用</title>
       <link href="/2025/01/07/%E5%85%B3%E4%BA%8Einclude%E4%B8%8E%E5%A4%9A%E4%B8%AA%E6%BA%90%E6%96%87%E4%BB%B6%E5%85%B3%E8%81%94/"/>
       <url>/2025/01/07/%E5%85%B3%E4%BA%8Einclude%E4%B8%8E%E5%A4%9A%E4%B8%AA%E6%BA%90%E6%96%87%E4%BB%B6%E5%85%B3%E8%81%94/</url>

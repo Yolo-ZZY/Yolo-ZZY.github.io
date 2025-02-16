@@ -2,7 +2,7 @@
 title: Hexo博客同时部署到 GitHub Page 和个人服务器
 date: 2024年12月30日22点39分
 tags: hexo
-categories: 博客
+categories: 博客上传个人服务器
 ---
 
 # Hexo 博客同时部署到 GitHub Page 和个人服务器

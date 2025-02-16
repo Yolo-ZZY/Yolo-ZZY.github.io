@@ -2,7 +2,7 @@
 title: 在多端上同步部署hexo
 date: ###### Sun Feb 16 23:45:39 CST 2025
 tags: hexo
-categories: c++初级学习
+categories: 博客上传个人服务器
 ---
 
 # 在多端上同步部署hexo

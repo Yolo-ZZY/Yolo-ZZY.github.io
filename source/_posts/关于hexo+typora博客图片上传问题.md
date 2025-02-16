@@ -2,7 +2,7 @@
 title: 关于hexo+typora博客图片上传问题
 data: 2024年12月30日10点03分
 tags: hexo
-categories: 博客
+categories: 博客上传个人服务器
 ---
 
 # 关于hexo+typora博客图片上传问题

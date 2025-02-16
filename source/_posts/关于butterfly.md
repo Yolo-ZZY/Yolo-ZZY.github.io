@@ -1,9 +1,10 @@
 ---
 title: 关于butterfly
+
 tags: 
 - butterfly
 - hexo
-categories: 博客
+categories: 博客上传个人服务器
 
 ---
 

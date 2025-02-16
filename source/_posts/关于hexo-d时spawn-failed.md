@@ -4,7 +4,7 @@ date: 2024-12-29 14:57:07
 tags: 
 - bug
 - hexo
-categories: 博客
+categories: 博客上传个人服务器
 ---
 
 参考链接

@@ -1,8 +1,9 @@
 ---
 title: 全面掌握const
+date: ###### Sun Feb 16 23:44:57 CST 2025
 tags: 
 - C++
-categories: 编程
+categories: c++初级学习
 ---
 # const
 ``` c++

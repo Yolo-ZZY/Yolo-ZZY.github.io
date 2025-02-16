@@ -1,8 +1,9 @@
 ---
 title: const.一级指针与引用的结合引用
+date: ###### Sun Feb 16 23:47:05 CST 2025
 tags: 
 - c++
-categories: 编程
+categories: c++初级学习
 ---
 
 ** 左值引用不能引用右值（临时量）**

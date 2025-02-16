@@ -3,7 +3,7 @@ title:  C++基础部分
 data: 2025年1月7日13点48分
 tags:
 - C++
-categories: 编程
+categories: c++初级学习
 ---
 
 ![image-20250107134923183](https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20250107134923183)

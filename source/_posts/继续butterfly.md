@@ -5,7 +5,7 @@ tags:
 - butterfly
 - Github
 - hexo
-categories: 博客
+categories: 博客上传个人服务器
 ---
 
 # 继续butterfly

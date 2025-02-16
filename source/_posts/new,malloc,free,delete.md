@@ -3,7 +3,7 @@ title: new,malloc,free,delete
 data: 2025年1月8日15点22分
 tags:
 - C++
-categories: 编程
+categories: c++初级学习
 ---
 # malloc,free;new,delete
 **malloc和free是c的库函数

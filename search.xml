@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>ERPNEXT环境搭建</title>
+      <link href="/2025/02/17/ERPNEXT%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+      <url>/2025/02/17/ERPNEXT%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
+      
+        <content type="html"><![CDATA[<h1 id="ERPNEXT环境搭建"><a href="#ERPNEXT环境搭建" class="headerlink" title="ERPNEXT环境搭建"></a>ERPNEXT环境搭建</h1><h2 id="配置虚拟机环境"><a href="#配置虚拟机环境" class="headerlink" title="配置虚拟机环境"></a>配置虚拟机环境</h2><ol><li><p>修改网络配置文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/netplan/50-cloud-init.yaml</span><br></pre></td></tr></table></figure><p>内容为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">network:</span><br><span class="line">    ethernets:</span><br><span class="line">          ens33:</span><br><span class="line">            addresses: [192.168.8.98/24] # 注意缩进，：后有空格</span><br><span class="line">            dhcp4: no   # 自动获取ip，no就是静态</span><br><span class="line">            routes:</span><br><span class="line">                 - to: default</span><br><span class="line">                   via: 192.168.8.1 # 设置默认网关,注意与本机ip对应</span><br><span class="line">            dhcp6: no</span><br><span class="line">            nameservers:</span><br><span class="line">                 addresses: [114.114.114.114,8.8.8.8,4.4.4.4]</span><br><span class="line">                 # 设置DNS服务器</span><br><span class="line">    version: 2</span><br><span class="line"></span><br></pre></td></tr></table></figure></li><li><p>重启网络服务</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netplan apply</span><br></pre></td></tr></table></figure></li><li><p>重启ssh</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service sshd start</span><br><span class="line"></span><br></pre></td></tr></table></figure></li><li><p>只要主机能够ping通虚拟机，就意味着可以不用再vmware黑框框里操作了</p></li><li><p>修改root密码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd root</span><br></pre></td></tr></table></figure></li><li><p>换源</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/apt/sources.list.d/ubuntu.sources</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Types: deb</span><br><span class="line">URIs: https://mirrors.tuna.tsinghua.edu.cn/ubuntu</span><br><span class="line">Suites: noble noble-updates noble-backports</span><br><span class="line">Components: main restricted universe multiverse</span><br><span class="line">Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg</span><br><span class="line"></span><br></pre></td></tr></table></figure></li><li><p>更新apt</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br></pre></td></tr></table></figure></li><li><p>更改时区</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tzselect</span><br></pre></td></tr></table></figure></li><li><p>修改host</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/hosts # 域名解析140.82.113.4 gitHub.com</span><br></pre></td></tr></table></figure></li><li><p>修改字符编码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">locale</span><br><span class="line">export LC_ALL=C.UTF-8</span><br></pre></td></tr></table></figure></li><li><p>安装</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y git curl</span><br><span class="line">curl --version</span><br><span class="line">sudo service cron start</span><br></pre></td></tr></table></figure></li><li><p>查看服务器状态</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">htop</span><br></pre></td></tr></table></figure></li><li><p>查看python等工具</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">python3 -V</span><br><span class="line">pip3 -V</span><br><span class="line">node -V</span><br><span class="line">redis-server -V</span><br><span class="line">wkhtmltopdf -V</span><br><span class="line">yarn -v</span><br><span class="line">mysql -v</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 实习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ERPNEXT </tag>
+            
+            <tag> 虚拟机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vscode同步博客</title>
       <link href="/2025/02/17/%E9%80%9A%E8%BF%87vscode%E5%90%8C%E6%AD%A5%E5%8D%9A%E5%AE%A2/"/>
       <url>/2025/02/17/%E9%80%9A%E8%BF%87vscode%E5%90%8C%E6%AD%A5%E5%8D%9A%E5%AE%A2/</url>
@@ -119,7 +146,7 @@
       
       <categories>
           
-          <category> 博客上传个人服务器 </category>
+          <category> c++初级学习 </category>
           
       </categories>
       
@@ -273,7 +300,7 @@
       
       <categories>
           
-          <category> vscode连接终端 </category>
+          <category> 实习 </category>
           
       </categories>
       

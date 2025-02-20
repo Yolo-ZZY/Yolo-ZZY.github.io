@@ -50,14 +50,6 @@ int main ()
     //const int **q=&p;
     //const int **<=int **  !注意二级指针const与非const不能转化
 
-
-
-
-    int a=10;
-    int *p=&a;
-    int *const *q=&p;
-    //const 修饰int * ,*<=*,可以的
-    
 }
 
 ```

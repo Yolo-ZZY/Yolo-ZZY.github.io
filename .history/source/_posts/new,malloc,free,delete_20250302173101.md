@@ -1,6 +1,6 @@
 ---
 title: new,malloc,free,delete
-date: 2025年1月8日15点22分
+data: 2025年1月8日15点22分
 tags:
 - C++
 categories: c++初级学习

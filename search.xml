@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>二分查找</title>
+      <link href="/2025/03/06/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
+      <url>/2025/03/06/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</url>
+      
+        <content type="html"><![CDATA[<h1 id="二分查找-leetcode-704"><a href="#二分查找-leetcode-704" class="headerlink" title="二分查找 leetcode 704"></a>二分查找 leetcode 704</h1><ol><li>vector</li></ol><p>需要头文件<br>#include <vector></p><p>vector<int>&amp; nums     nums 是 vector<int> 类型对象的引用<br>知道数组长度           nums.size()</p><ol start="2"><li>题目<br>给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。</li></ol><p>示例 1:</p><p>输入: nums &#x3D; [-1,0,3,5,9,12], target &#x3D; 9<br>输出: 4<br>解释: 9 出现在 nums 中并且下标为 4<br>示例 2:</p><p>输入: nums &#x3D; [-1,0,3,5,9,12], target &#x3D; 2<br>输出: -1<br>解释: 2 不存在 nums 中因此返回 -1<br>提示：</p><p>你可以假设 nums 中的所有元素是不重复的。<br>n 将在 [1, 10000]之间。<br>nums 的每个元素都将在 [-9999, 9999]之间。</p><ol start="3"><li>解法<br>暴力解<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="type">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">search</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">       <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=nums.<span class="built_in">size</span>()<span class="number">-1</span>;i++)</span><br><span class="line">       &#123;</span><br><span class="line">        <span class="keyword">if</span>(nums[i]==target)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">       &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li></ol><hr><p>二分查找<br><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/20250306201251.png" alt="20250306201251"></p><p>前提数组递增有序且无重复</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(left&lt;=right)</span><br><span class="line">&#123;</span><br><span class="line">    mid=(left+right)/<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">if</span>(nums[mid]==target)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> mid;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(nums[mid]&gt;target)</span><br><span class="line">    &#123;</span><br><span class="line">        right=mid<span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(nums[mid]&lt;target)</span><br><span class="line">    &#123;</span><br><span class="line">        left=mid<span class="number">+1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 二分查找 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>理解函数模板</title>
       <link href="/2025/03/06/%E7%90%86%E8%A7%A3%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/"/>
       <url>/2025/03/06/%E7%90%86%E8%A7%A3%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/</url>

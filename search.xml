@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>mysql数据库面试</title>
+      <link href="/2025/03/13/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9D%A2%E8%AF%95/"/>
+      <url>/2025/03/13/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9D%A2%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<p>mysql 关系型数据库，类似与一张excel表格</p><ol><li><p>行 对于记录， 列 对于属性</p></li><li><p>数据存放再磁盘中，而不是内存<br>show global variables like “%datadir%”<br>显示路径</p></li><li><p>b+树的形式存储， 一行行记录通过链表串在一起</p></li><li><p>文件系统与数据库的联系与区别<br>文件系统 无结构<br>数据库 有结构<br>数据库满足某种范式时，会减少冗余</p></li></ol><p>文件系统缺点： 当文件系统发生变化时，相应的程序代码也要发生变化，才能正常运行<br>而数据库通过DBMS的两级映像，实现了物理独立性与逻辑独立性<br>例<br>readexcel（list,4,”d:&#x2F;&#x2F;“）  从第四列读数据<br>select * from “表”          无需关注哪一列<br>实现了独立性</p><ol start="5"><li><p>DBMS<br>数据库管理系统<br><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/20250313164000.png" alt="20250313164000"></p><p>帮助我们解析sql语句，并返回结果</p></li><li><p>DBMS的数据物理独立性与逻辑独立性是如何实现的<br>三级模式和两级映像<br><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/20250313164353.png" alt="20250313164353"></p></li></ol><p> 外模式：用户查询到的<br> 映射<br> 概念模式：整张表或关系   全局逻辑结构<br> 概念模式-内模式映射<br> 内模式： 数据的物理存储</p><p> 逻辑独立性：逻辑结构变化(加列)，代码不用变</p><p> 物理独立性：内模式改变，逻辑结构不变。当内模式改变，修改映射即可，不必动其他模式</p><ol start="7"><li><p>数据库的设计过程</p><ol><li><p>需求分析</p></li><li><p>概念结构设计 ： E-R图（关系图）<br><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/20250313165548.png" alt="20250313165548"></p></li><li><p>逻辑结构设计： ER图转变为一张表</p></li><li><p>物理结构设计：底层存储结构</p></li><li><p>数据库实施：把表建立起来</p></li><li><p>数据库运行的维护</p></li></ol></li><li><p>索引<br>变长记录<br>b+树： 最底层才是数据，上层是索引</p></li><li><p>事务<br>ACID</p><ol><li><p>atomicity原子性：事务中的所有操作，要么都成功，要么都失败<br><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/20250313170748.png" alt="20250313170748"><br>undo log   出错就回滚rollback</p></li><li><p>consistency一致性：事务执行之前和执行之后，数据是完全一致的</p></li><li><p>隔离性：事务之间互不影响<br>四个隔离级别：<br>Serializable、Repeatable read、read committed、read uncommitted<br><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/20250313171157.png" alt="20250313171157"></p></li></ol><p>脏读：读到了尚未被提交的数据<br>不可重复读：前后多次读，数据不一致<br>幻读：前后多次读，查询的结果数量不同</p><ol start="4"><li>持久性：事务执行完，数据就永久的保存在磁盘中 commit</li></ol></li><li><p>死锁<br>死锁的预防：打破四个条件</p><ol><li>互斥</li><li>请求和保持</li><li>不可剥夺</li><li>循环等待 资源进行编号<br>死锁的避免： 银行家算法<br>一次性给足所有所需资源</li></ol></li><li><p>视图<br>本质是虚拟表， create view  xxx at<br>封装select语句</p></li><li><p>各种键<br>超键： 唯一标识+冗余<br>候选键： 超键无冗余<br>主键： 候选键中的一个选一个，真正的标识<br>外键： 一个表的普通属性，是另一个表的主键</p></li><li><p>范式<br>数据库的设计遵循三个范式<br>第一范式： 属性的原子性<br>属性不可再拆分  日期：年月日可再拆为年、月、日</p></li></ol><p>第二范式： 无部份依赖<br>消除数据冗余<br>删除异常： 不同的信息放在一张表里，删除一个信息，可能会导致另一个信息被删除<br>空字段异常<br>更新异常： 因为有冗余，更新可能麻烦<br>非主属性需要完全依赖主属性<br>学号 课程号 姓名 学分 成绩<br>学号 课程号为主属性<br>姓名只依赖学号<br>学分只依赖课程号<br>成绩做到了完全依赖<br>因此姓名学分没有做到第二范式<br>怎么解决？ 拆表<br>学生表：学号 姓名<br>课程表：课程号 课程名<br>成绩表：学号 课程号 成绩</p><p>第三范式 无传递依赖<br>学号 姓名 年龄 学院名称 学院电话<br><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/20250313174635.png" alt="20250313174635"><br>很多学生再同一个学院，数据冗余<br>-》更新异常</p><p>拆表：</p><ol start="14"><li>数据模型<br>层次模型<br><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/20250313174924.png" alt="20250313174924"></li></ol><p>网状模型<br><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/20250313174909.png" alt="20250313174909"></p><p>关系模型 er图</p><ol start="15"><li>关系运算<br>并 union<br>SELECT * FROM account WHERE id &#x3D; 1<br>UNION<br>SELECT * FROM account WHERE id &#x3D; 2;</li></ol><p>差 except<br>select * from account where id &lt; 3<br>except<br>select * from account where id &#x3D; 1;</p><p>笛卡尔积<br><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/20250313175103.png" alt="20250313175103"></p><p>投影：<br>projection<br>select id from account;   查询某个属性</p><p>连接<br>等值连接 在笛卡尔积的基础上<br>select * from student,teacher where student.id &#x3D; teacher.tid;</p><p>非等值连接</p><p>左外连接  保留整个左表</p><p>右外连接  保留整个右表</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 南航面试复习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vscode资源管理器中查找</title>
       <link href="/2025/03/09/vscode%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD%E6%9F%A5%E6%89%BE/"/>
       <url>/2025/03/09/vscode%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD%E6%9F%A5%E6%89%BE/</url>

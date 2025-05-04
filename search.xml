@@ -4,6 +4,66 @@
   
     
     <entry>
+      <title></title>
+      <link href="/2025/05/04/%E8%AE%B0%E5%BD%95%E5%B0%8F%E7%B1%B3%E6%89%8B%E6%9C%BA%E5%88%B7%E7%B3%BB%E7%BB%9F/"/>
+      <url>/2025/05/04/%E8%AE%B0%E5%BD%95%E5%B0%8F%E7%B1%B3%E6%89%8B%E6%9C%BA%E5%88%B7%E7%B3%BB%E7%BB%9F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="记录小米手机刷系统"><a href="#记录小米手机刷系统" class="headerlink" title="记录小米手机刷系统"></a>记录小米手机刷系统</h1><p>手机型号： Redmi Note 11 5g（国外有叫NOTE 11 T）<br>目的：刷个支持google的系统<br>方案1：pixel experience （失败，似乎是因为卡刷包ab分区不成功）<br>方案2：直接刷miui印度版 （失败，卡谷歌验证进不去）<br>方案3：twrp+miui印度版 （成功）（成功原因不明，不确定是找的线刷包跳了谷歌验证，还是twrp在recovery模式跳过谷歌验证）</p><ol><li><p>解锁bl锁<br>用官方工具解bl,等7d</p></li><li><p>找个rec，找来找去还是twrp<br>注意：redmi是vab，正常刷rec刷不进去！ 我反正第一次刷错rec直接成砖了，fastboot都进不去</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastboot flash boot &lt;recovery_filename&gt;.img</span><br></pre></td></tr></table></figure><p>临时把twrp刷进去，用twrp里的安装rec固化rec，以后打开rec都是自己安装的rec了</p></li><li><p>自己找对应机型的 miui global 线刷包</p></li><li><p>用小米刷机工具刷入线刷包</p></li><li><p>（或许？）rec模式下，搞机助手跳过谷歌验证<br><a href="https://imold.wang/technology/phone/364.html">https://imold.wang/technology/phone/364.html</a></p></li></ol><hr><p>救砖笔记：<br>参考视频： <a href="https://www.bilibili.com/video/BV18F411V7e9/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click">https://www.bilibili.com/video/BV18F411V7e9/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click</a><br>关键是让手机连到电脑<br><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/20250504145216.png" alt="20250504145216"> mtk那个软件简直神了，前提是驱动啥的搞好，这就玄学了</p><p>驱动问题：<br>redmi在设备管理器里识别成mtp啥的，更新有显示inf安装失败，去下个新的mtp，然后把老的inf删除掉（inf文件右键安装，位置在system32里）</p><p>若干工具：</p><ol><li>搞机助手(有点用，但不多。。。还会和安卓adb冲突，adb如果显示端口占用，记得把这个关了)</li><li>安卓adb</li><li>小米解锁工具</li><li>小米刷机工具 miflash pro</li><li>libusb</li><li>twrp，这个最难找</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 玩机 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 玩机 </tag>
+            
+            <tag> 救砖 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>安装SDN网络数据中心环境</title>
+      <link href="/2025/03/28/%E5%AE%89%E8%A3%85SDN%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E7%8E%AF%E5%A2%83/"/>
+      <url>/2025/03/28/%E5%AE%89%E8%A3%85SDN%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E7%8E%AF%E5%A2%83/</url>
+      
+        <content type="html"><![CDATA[<h1 id="失败安装"><a href="#失败安装" class="headerlink" title="失败安装"></a>失败安装</h1><h2 id="1-虚拟机ubuntu16-04"><a href="#1-虚拟机ubuntu16-04" class="headerlink" title="1. 虚拟机ubuntu16.04"></a>1. 虚拟机ubuntu16.04</h2><p><a href="https://blog.csdn.net/trackxiaoxin321/article/details/115591796">https://blog.csdn.net/trackxiaoxin321/article/details/115591796</a></p><ol><li><a href="http://mirrors.ustc.edu.cn/ubuntu-releases/16.04/">http://mirrors.ustc.edu.cn/ubuntu-releases/16.04/</a>         desktop</li><li>分配cpu一般为本机一半</li><li>主机与ubuntu之间复制粘贴<br>sudo apt-get install open-vm-tools-desktop -y<br>重启</li></ol><h2 id="2-配置mininet"><a href="#2-配置mininet" class="headerlink" title="2. 配置mininet"></a>2. 配置mininet</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd root</span><br><span class="line">su root</span><br><span class="line">apt-get install git</span><br><span class="line">git clone https://github.com/mininet/mininet.git</span><br><span class="line">cd mininet</span><br><span class="line">cd util</span><br><span class="line">./install.sh -n3v</span><br><span class="line">mn                          // 测试</span><br><span class="line">pingall</span><br><span class="line">exit</span><br></pre></td></tr></table></figure><h2 id="3-RYU安装"><a href="#3-RYU安装" class="headerlink" title="3. RYU安装"></a>3. RYU安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">wget https://bootstrap.pypa.io/get-pip.py       //https://blog.csdn.net/m0_46176760/article/details/118717366?utm_source=app&amp;app_version=4.11.0</span><br><span class="line"></span><br><span class="line">python3 get-pip.py.2</span><br><span class="line"></span><br><span class="line">cd /home/zzy</span><br><span class="line"></span><br><span class="line">git clone https://github.com/osrg/ryu.git</span><br><span class="line"></span><br><span class="line">cd ryu</span><br><span class="line"></span><br><span class="line">pip install -r tools/pip-requires</span><br><span class="line"></span><br><span class="line">python3 setup.py install</span><br><span class="line"></span><br><span class="line">cd ryu/app</span><br><span class="line"></span><br><span class="line">ryu-manager example_switch_13.py                 //测试</span><br><span class="line"></span><br><span class="line">mn  --controller=remote                         //另一个终端里，控制器</span><br><span class="line">pingall</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><h1 id="20-04"><a href="#20-04" class="headerlink" title="20.04"></a>20.04</h1><h2 id="1-vmware-workstation安装ubuntu无法显示继续、下一步按钮"><a href="#1-vmware-workstation安装ubuntu无法显示继续、下一步按钮" class="headerlink" title="1.vmware workstation安装ubuntu无法显示继续、下一步按钮"></a>1.vmware workstation安装ubuntu无法显示继续、下一步按钮</h2><p><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/20250401160737.png" alt="20250401160737"><br>增加github域名<br>&#x2F;etc&#x2F;hosts</p><h2 id="2-配置mininet-1"><a href="#2-配置mininet-1" class="headerlink" title="2. 配置mininet"></a>2. 配置mininet</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd root</span><br><span class="line">su root</span><br><span class="line">apt-get install git</span><br><span class="line">git clone https://github.com/mininet/mininet.git</span><br><span class="line">cd mininet</span><br><span class="line">cd util</span><br><span class="line">./install.sh -n3v</span><br><span class="line">mn                          // 测试</span><br><span class="line">pingall</span><br><span class="line">exit</span><br></pre></td></tr></table></figure><h2 id="3-RYU安装-1"><a href="#3-RYU安装-1" class="headerlink" title="3. RYU安装"></a>3. RYU安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">wget https://bootstrap.pypa.io/get-pip.py       //https://blog.csdn.net/m0_46176760/article/details/118717366?utm_source=app&amp;app_version=4.11.0</span><br><span class="line"></span><br><span class="line">python3 get-pip.py.2</span><br><span class="line"></span><br><span class="line">cd /home/zzy</span><br><span class="line"></span><br><span class="line">git clone https://github.com/osrg/ryu.git</span><br><span class="line"></span><br><span class="line">cd ryu</span><br><span class="line"></span><br><span class="line">pip install -r tools/pip-requires</span><br><span class="line"></span><br><span class="line">python3 setup.py install</span><br><span class="line"></span><br><span class="line">cd ryu/app</span><br><span class="line"></span><br><span class="line">ryu-manager example_switch_13.py                 //测试</span><br><span class="line"></span><br><span class="line">mn  --controller=remote                         //另一个终端里，控制器</span><br><span class="line">pingall</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd /home/zzy/mininet</span><br><span class="line"></span><br><span class="line">cd examples </span><br><span class="line"></span><br><span class="line">ls</span><br><span class="line"></span><br><span class="line">./miniedit.py</span><br><span class="line"></span><br><span class="line">python3 miniedit.py</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 毕业设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SDN </tag>
+            
+            <tag> 数据中心 </tag>
+            
+            <tag> 网络 </tag>
+            
+            <tag> 深度学习 </tag>
+            
+            <tag> 毕设 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>模拟实现string类型代码</title>
       <link href="/2025/03/21/%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0string%E7%B1%BB%E5%9E%8B%E4%BB%A3%E7%A0%81/"/>
       <url>/2025/03/21/%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0string%E7%B1%BB%E5%9E%8B%E4%BB%A3%E7%A0%81/</url>
@@ -104,11 +164,11 @@
     
     
     <entry>
-      <title>vscode资源管理器中查找</title>
-      <link href="/2025/03/09/vscode%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD%E6%9F%A5%E6%89%BE/"/>
-      <url>/2025/03/09/vscode%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD%E6%9F%A5%E6%89%BE/</url>
+      <title>相关快捷键</title>
+      <link href="/2025/03/09/%E7%9B%B8%E5%85%B3%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+      <url>/2025/03/09/%E7%9B%B8%E5%85%B3%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
       
-        <content type="html"><![CDATA[<ol><li>vscode在资源管理器中进行查询 vscode 查找文件名 <blockquote><p>ctrl + P</p></blockquote></li></ol>]]></content>
+        <content type="html"><![CDATA[<ol><li><p>vscode在资源管理器中进行查询 vscode 查找文件名 </p><blockquote><p>ctrl + P</p></blockquote></li><li><p>查询cpu核数</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cmd</span><br><span class="line">wmic</span><br><span class="line">cpu get NumberOfCores</span><br></pre></td></tr></table></figure></li></ol>]]></content>
       
       
       <categories>
@@ -120,7 +180,7 @@
       
         <tags>
             
-            <tag> vscode </tag>
+            <tag> 快捷键 </tag>
             
         </tags>
       

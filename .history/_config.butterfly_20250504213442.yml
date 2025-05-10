@@ -84,7 +84,7 @@ avatar:
 disable_top_img: false
 
 #横幅图片 If the banner of page not setting, it will show the default_top_img  顶部图
-default_top_img: 
+default_top_img: /img/bilibili.jpg
 
 # The banner image of index page
 index_img:
@@ -109,11 +109,11 @@ category_img:
 category_per_img:
 
 # The background image of footer    页脚背景图
-footer_img: false
+footer_img: Aqua
 
 # 网页背景Website Background
 # Can set it to color or image url
-background: /img/zanni.jpg
+background: Aquamarine
 
 # 文章封面
 cover:    
@@ -312,7 +312,7 @@ aside:
   #卡片公告
   card_announcement:
     enable: true
-    content: 我要睡觉！！！！<br />2661572212@qq.com
+    content: 我要睡觉！<br />2661572212@qq.com
   card_recent_post:
     enable: true
     # If set 0 will show all
@@ -984,7 +984,7 @@ note:
 
 # https://github.com/MoOx/pjax
 pjax:
-  enable: false
+  enable: true
   # Exclude the specified pages from pjax, such as '/music/'
   exclude:
     - /music/
@@ -1007,7 +1007,7 @@ snackbar:
 
 # Instant.page
 # https://instant.page/
-instantpage: true
+instantpage: false
 
 # Lazyload
 # https://github.com/verlok/vanilla-lazyload
@@ -1054,7 +1054,6 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
-    - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
   bottom:
     # - <script src="xxxx"></script>
 

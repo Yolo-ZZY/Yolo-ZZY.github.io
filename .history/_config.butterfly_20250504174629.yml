@@ -84,7 +84,7 @@ avatar:
 disable_top_img: false
 
 #横幅图片 If the banner of page not setting, it will show the default_top_img  顶部图
-default_top_img: 
+default_top_img: /img/bilibili.jpg
 
 # The banner image of index page
 index_img:
@@ -109,11 +109,11 @@ category_img:
 category_per_img:
 
 # The background image of footer    页脚背景图
-footer_img: false
+footer_img: Aqua
 
 # 网页背景Website Background
 # Can set it to color or image url
-background: /img/zanni.jpg
+background: Aquamarine
 
 # 文章封面
 cover:    
@@ -170,9 +170,25 @@ index_site_info_top:
 index_top_img_height:
 
 # 副标题The subtitle on homepage
-# 主页subtitle
-
-
+subtitle:
+  enable: true
+  # Typewriter Effect
+  effect: true
+  # Customize typed.js
+  # https://github.com/mattboldt/typed.js/#customization
+  typed_option:
+  # Source - Call the third-party service API (Chinese only)
+  # It will show the source first, then show the content of sub
+  # Choose: false/1/2/3
+  # false - disable the function
+  # 1 - hitokoto.cn
+  # 2 - yijuzhan.com
+  # 3 - jinrishici.com
+  source: false
+  # If you close the typewriter effect, the subtitle will only show the first line of sub
+  sub: 
+  - H A P P Y !
+  - Seize the day, seize the night.
 
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
@@ -312,7 +328,7 @@ aside:
   #卡片公告
   card_announcement:
     enable: true
-    content: 我要睡觉！！！！<br />2661572212@qq.com
+    content: 我要睡觉！<br />2661572212@qq.com
   card_recent_post:
     enable: true
     # If set 0 will show all
@@ -458,11 +474,16 @@ wordcount:
 
 # Busuanzi count for PV / UV in site
 busuanzi:
+  enable: true
+total_visitors: true
+  total_visitors_icon: user
+  total_views: true
+  total_views_icon: eye
+  post_views: true
+  post_views_icon: eye
 
-  site_uv: true
-  site_pv: true
-  page_pv: true
-
+  init_pv: 10000
+  init_uv: 10000
 
 # --------------------------------------
 # Math
@@ -474,7 +495,7 @@ busuanzi:
 math:
   # Choose: mathjax, katex
   # Leave it empty if you don't need math
-  use: mathjax
+  use:
   per_page: true
   hide_scrollbar: false
 
@@ -523,7 +544,7 @@ search:
 share:
   # Choose: sharejs / addtoany
   # Leave it empty if you don't need share
-  use: sharejs
+  use: 
 
   # Share.js
   # https://github.com/overtrue/share.js
@@ -544,14 +565,14 @@ comments:
   # Leave it empty if you don't need comments
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
   # Format of two comments system : Disqus,Waline
-  use: 
+  use:
   # Display the comment name next to the button
   text: true
   # Lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
-  lazyload: true
+  lazyload: false
   # Display comment count in post's top_img
-  count: true
+  count: false
   # Display comment count in Home Page
   card_post_count: false
 
@@ -797,7 +818,7 @@ mask:
 
 # Loading Animation
 preloader:
-  enable: true
+  enable: false
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
@@ -987,8 +1008,7 @@ pjax:
   enable: false
   # Exclude the specified pages from pjax, such as '/music/'
   exclude:
-    - /music/
-    - /no-pjax/
+    # - /xxxxxx/
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
@@ -1007,7 +1027,7 @@ snackbar:
 
 # Instant.page
 # https://instant.page/
-instantpage: true
+instantpage: false
 
 # Lazyload
 # https://github.com/verlok/vanilla-lazyload
@@ -1054,7 +1074,6 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
-    - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
   bottom:
     # - <script src="xxxx"></script>
 

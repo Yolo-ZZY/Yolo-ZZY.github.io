@@ -84,7 +84,7 @@ avatar:
 disable_top_img: false
 
 #横幅图片 If the banner of page not setting, it will show the default_top_img  顶部图
-default_top_img: 
+default_top_img: /img/bilibili.jpg
 
 # The banner image of index page
 index_img:
@@ -113,7 +113,7 @@ footer_img: false
 
 # 网页背景Website Background
 # Can set it to color or image url
-background: /img/zanni.jpg
+background: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/zanni.jpg
 
 # 文章封面
 cover:    
@@ -312,7 +312,7 @@ aside:
   #卡片公告
   card_announcement:
     enable: true
-    content: 我要睡觉！！！！<br />2661572212@qq.com
+    content: 我要睡觉！<br />2661572212@qq.com
   card_recent_post:
     enable: true
     # If set 0 will show all

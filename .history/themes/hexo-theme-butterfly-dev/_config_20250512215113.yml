@@ -104,11 +104,11 @@ category_img:
 category_per_img:
 
 # The background image of footer
-footer_img: false
+footer_img: Aqua
 
 # 网页背景Website Background
 # Can set it to color or image url
-background: /img/zanni.jpg
+background: Aquamarine
 
 cover:
   # Disable the cover or not
@@ -789,7 +789,7 @@ mask:
 
 # Loading Animation
 preloader:
-  enable: true
+  enable: false
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
@@ -1045,7 +1045,6 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
-     - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
   bottom:
     # - <script src="xxxx"></script>
 

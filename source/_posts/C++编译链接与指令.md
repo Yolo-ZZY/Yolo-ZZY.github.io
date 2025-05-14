@@ -3,7 +3,7 @@ title: C++学习-1编译链接原理
 date: 2024-12-29 15:40:47
 tags: 
 - C++
-categories: c++初级学习
+cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/vertin.png
 ---
 
 # 编译链接原理

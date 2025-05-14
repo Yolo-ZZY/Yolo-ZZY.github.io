@@ -4,6 +4,7 @@ date: 2025年1月7日13点48分
 tags:
 - C++
 categories: c++初级学习
+cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/snowbreak.jpg
 ---
 
 ![image-20250107134923183](https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20250107134923183)

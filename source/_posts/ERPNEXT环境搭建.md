@@ -5,6 +5,7 @@ tags:
 - ERPNEXT
 - 虚拟机
 categories: 实习
+cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/fenny.jpg
 ---
 # ERPNEXT环境搭建
 ## 配置虚拟机环境

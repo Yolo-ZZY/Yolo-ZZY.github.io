@@ -4,6 +4,7 @@ date: ###### Sun Feb 16 23:47:05 CST 2025
 tags: 
 - c++
 categories: c++初级学习
+cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/frieren.png
 ---
 
 ** 左值引用不能引用右值（临时量）**

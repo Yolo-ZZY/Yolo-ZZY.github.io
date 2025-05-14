@@ -3,6 +3,7 @@ title: ERPNEXT环境搭建（二）
 date: ###### Tue Feb 18 11:16:08 CST 2025
 tags: ERPNEXT
 categories: 实习
+cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/arcana.jpg
 ---
 
 # 装bench的若干包

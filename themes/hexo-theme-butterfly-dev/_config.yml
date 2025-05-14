@@ -108,21 +108,19 @@ footer_img: false
 
 # 网页背景Website Background
 # Can set it to color or image url
-background: /img/zanni.jpg
+background: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/beach.png
 
 cover:
   # Disable the cover or not
   index_enable: true
-  aside_enable: true
-  archives_enable: true
+  aside_enable: false
+  archives_enable: false
   # When cover is not set, the default cover is displayed
   position: both
-  default_cover: 
-    # - xxx.jpg
-
+  default_cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/furina.jpg
 
 # Replace Broken Images
-error_img:
+error_img: 
   flink: /img/friend_404.gif
   post_page: /img/404.jpg
 
@@ -320,28 +318,28 @@ aside:
   card_recent_post:
     enable: true
     # If set 0 will show all
-    limit: 5
+    limit: 3
     # Sort: date / updated
     sort: date
     sort_order:
   card_newest_comments:
     enable: false
     sort_order:
-    limit: 6
+    limit: 3
     # Unit: mins, save data to localStorage
     storage: 10
     avatar: true
   card_categories:
     enable: true
     # If set 0 will show all
-    limit: 8
+    limit: 4
     # Choose: none / true / false
     expand: none
     sort_order:
   card_tags:
     enable: true
     # If set 0 will show all
-    limit: 40
+    limit: 20
     color: false
     # Order of tags, random/name/length
     orderby: random

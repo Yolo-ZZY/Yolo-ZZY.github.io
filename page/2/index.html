@@ -1,0 +1,250 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Yolo-zzy的博客</title><meta name="author" content="yolo"><meta name="copyright" content="yolo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Yolo-zzy的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yolo-zzy的博客">
+<meta property="og:url" content="https://yolo-zzy.github.io/page/2/index.html">
+<meta property="og:site_name" content="Yolo-zzy的博客">
+<meta property="og:description" content="Yolo-zzy的博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yolo-zzy.github.io/img/eln.jpg">
+<meta property="article:author" content="yolo">
+<meta property="article:tag" content="Yolo-zzy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yolo-zzy.github.io/img/eln.jpg"><link rel="shortcut icon" href="/img/panda.png"><link rel="canonical" href="https://yolo-zzy.github.io/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Yolo-zzy的博客',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="web_bg" style="background-image: url(https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/beach.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/eln.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">39</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page fixed" id="page-header" style="background-image: url(/img/bilibili.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/panda.png" alt="Logo"><span class="site-name">Yolo-zzy的博客</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Yolo-zzy的博客</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/Yolo-ZZY" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="/2661572212@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/356247388" target="_blank" title="Bilibili"><i class="fab fa-bilibili" style="color: #00aeec;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc masonry" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover"><a href="/2025/05/14/%E5%AD%A6%E4%B9%A0%E5%A4%8D%E6%95%B0%E7%B1%BBCComplex/" title="学习复数类CComplex"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/shenlilinghua.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="学习复数类CComplex"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/05/14/%E5%AD%A6%E4%B9%A0%E5%A4%8D%E6%95%B0%E7%B1%BBCComplex/" title="学习复数类CComplex">学习复数类CComplex</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-14T12:31:31.396Z" title="发表于 2025-05-14 20:31:31">2025-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/c-%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/">c++初级学习</a></span></div><div class="content">学习复数类CComplexC++运算符重载：使对象的运算表现和编译器内置类型一样123456template &lt;typename T&gt;T sum(T a, T b)&#123;    return a + b;&#125;//如果T为对象，无法相加，需要重载运算符 a.operator+(b) 复数类1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162class CComplex&#123;    public:    //CComplex();CComplex(1)给左边;CComplex(1,1);这三个都成立    CComplex(int r=0,int i=0)    :mreal(r),mimag(i)  //初始化列表    &#123;    &#125;    //指导编译器怎么做CComplex类的加法运算    CComplex operator+(const...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2025/05/14/%E7%9B%B8%E5%85%B3%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="相关快捷键"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/sparkle.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="相关快捷键"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/05/14/%E7%9B%B8%E5%85%B3%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="相关快捷键">相关快捷键</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-14T12:31:31.395Z" title="发表于 2025-05-14 20:31:31">2025-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a></span></div><div class="content"> vscode在资源管理器中进行查询 vscode 查找文件名   ctrl + P   查询cpu核数 123cmdwmiccpu get NumberOfCores  ubuntu中打开终端CTRL+ALT+T  nano清空一行 ctrl k  如何在github上用vscode看源码:&gt;   .在线vscode：仓库详情界面按下“。”键 在线运行项目 在项目地址前加上gitpod.io/#/前缀 登陆： 加载： 运行    vscode打开终端  ctrl+shift+`    </div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2025/05/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%9D%A2%E8%AF%95/" title="数据结构面试"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/robin.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构面试"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/05/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%9D%A2%E8%AF%95/" title="数据结构面试">数据结构面试</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-14T12:31:31.390Z" title="发表于 2025-05-14 20:31:31">2025-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%8D%97%E8%88%AA%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0/">南航面试复习</a></span></div><div class="content">数据结构算法算法的定义解决特定问题步骤的描述形式有：伪代码，文字描述 算法的基本特征 输入输出 有穷性 确定性 可行性  算法要求 正确性 可读性 健壮性  递归递归的本质：自己调用自己 系统栈的作用 保存上下文 传递参数 保存临时变量  栈帧  递归与动态规划 为什么需要改动态规划？存在重复计算，利用缓存  什么是贪心算法？迪杰斯特拉算法：每次选择最小的路径   哈希函数MD5 SHA  单向性不可逆 碰撞约束相同输入，输出要相同不同输入，允许碰撞，但要足够小 分布均匀  hash应用找一个大文件中相同的两行文件一个2T文件，计算机的内存256MB通过hash，每行进行映射，相同行的输出相同 排序 稳定性： 鸡毛插龟壳 鸡：基数排序  毛：冒泡排序插： 插入排序 龟： 归并排序  nlogn的时间复杂度： 快排，归并，堆排序  o（nlogn）不一定比o（n）快，看常数项上面是基于比较的，下面不基于比较   对全国年龄排序 计数排序0-100岁...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2025/05/14/%E5%AE%9E%E7%8E%B0C++STL%E5%90%91%E9%87%8F%E5%AE%B9%E9%87%8Fvector%E4%BB%A3%E7%A0%81/" title="C++STL向量容量vector代码"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/blade.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++STL向量容量vector代码"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/05/14/%E5%AE%9E%E7%8E%B0C++STL%E5%90%91%E9%87%8F%E5%AE%B9%E9%87%8Fvector%E4%BB%A3%E7%A0%81/" title="C++STL向量容量vector代码">C++STL向量容量vector代码</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-14T12:31:31.388Z" title="发表于 2025-05-14 20:31:31">2025-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/c-%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/">c++初级学习</a></span></div><div class="content">C++STL向量容量vector代码容器： SeqStack Queue vectorlast是最后一个元素，end是最后一个空间123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596template &lt;typename T&gt;class vector&#123;    public:    vector(int size=10)    &#123;        _first = new T[size];        _last = _first;        _end = _first + size;    &#125;    ~vector()    &#123;        delete [] _first;        _first =...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2025/05/14/%E5%85%A8%E9%9D%A2%E6%8E%8C%E6%8F%A1const/" title="全面掌握const"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/castorice.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="全面掌握const"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/05/14/%E5%85%A8%E9%9D%A2%E6%8E%8C%E6%8F%A1const/" title="全面掌握const">全面掌握const</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-14T12:31:31.385Z" title="发表于 2025-05-14 20:31:31">2025-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/c-%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/">c++初级学习</a></span></div><div class="content">const123456789int main()&#123;int a=10;a=20;		//a为左值,可被修改const int b=20;b=30;		//这里会报错，const被初始化后不能被修改&#125; c中 123456789101112void main()&#123;const int a=20;	//const 修饰的量，可以不初始化//不叫常量，叫常变量//int array[a]=&#123;&#125;;	这里想要初始化一个全0，长度为a的数组//int a=10; int array[a];这会报错//因为a是个变量int *p=(int*)&amp;a;	//int *p=&amp;a,破坏了a的常量性//（int*）把a从常量强转了，因此可以，即p是指向a的指针*p=30;printf(&quot;%d %d %d\n&quot;,a,*p,*(&amp;a));	//30，30，30&#125;c++的const必须初始化，是常量，不是变量12345678910int main()&#123;const int a=20；int...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2025/05/14/%E5%B9%B4%E6%9C%AB%E5%B0%8F%E7%BB%93/" title="年末小结"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/feixiao.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="年末小结"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/05/14/%E5%B9%B4%E6%9C%AB%E5%B0%8F%E7%BB%93/" title="年末小结">年末小结</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-14T12:31:31.383Z" title="发表于 2025-05-14 20:31:31">2025-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%9A%8F%E6%83%B3/">随想</a></span></div><div class="content">2024年年末小结额，想把博客同时部署到github和腾讯云时，才发现出bug了。。。:(  :joy:我登录腾讯云一直还是用账号密码登录，我起初没在意，原来只是ssh密钥压根就没设置，但今年没时间了，等明年吧。。。:0 :cry: :sob: 这两天回老家，暂时搞不了，可能要元旦结束才能继续吧。立个小目标，一直保持到过年，要加大对于leetcode和那个傻呗毕设的投入了，服了。。。（ 但我不会忘记初心的，狠学C++!!!  )   :sunglasses: 剩下好像没啥了，（其实今晚上感慨挺多的，一时提笔忘字）既然没想起来，说明还不是很重要，joy。。。明天还要早起，睡觉！ 人真是麻烦的东西，想要吃，又怕胖；想要玩，又想睡；想要摆，又想上进。。。突然想到懒羊羊了，hhh哦我想起来说啥了， 1. 吐槽毕设，高校傻逼玩意，我现在才知道高校里面喜欢搞的深度学习啊，机器视觉啊，除非985、211...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2025/05/14/%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0string%E7%B1%BB%E5%9E%8B%E4%BB%A3%E7%A0%81/" title="模拟实现string类型代码"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/xueyi.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="模拟实现string类型代码"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/05/14/%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0string%E7%B1%BB%E5%9E%8B%E4%BB%A3%E7%A0%81/" title="模拟实现string类型代码">模拟实现string类型代码</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-14T12:31:31.379Z" title="发表于 2025-05-14 20:31:31">2025-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/c-%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/">c++初级学习</a></span></div><div class="content">模拟实现string类型代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101#include &lt;iostream&gt;#include &lt;string&gt;using namespace std;//自己实现一个字符串对象class String&#123;    public:    String(const char* p=nullptr)    &#123;        if(p!=nullptr)        &#123;            _pstr=new char[strlen(p)+1];            strcpy(_pstr,p);        &#125;        else    ...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2025/05/14/%E7%90%86%E8%A7%A3%E5%AE%B9%E5%99%A8%E7%A9%BA%E9%97%B4%E9%85%8D%E7%BD%AE%E5%99%A8allocator%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7/" title="理解容器空间配置器allocator的重要性"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/silverwolf.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="理解容器空间配置器allocator的重要性"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/05/14/%E7%90%86%E8%A7%A3%E5%AE%B9%E5%99%A8%E7%A9%BA%E9%97%B4%E9%85%8D%E7%BD%AE%E5%99%A8allocator%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7/" title="理解容器空间配置器allocator的重要性">理解容器空间配置器allocator的重要性</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-14T12:31:31.377Z" title="发表于 2025-05-14 20:31:31">2025-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/c-%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/">c++初级学习</a></span></div><div class="content">理解容器空间配置器allocator的重要性123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117namespace myspace&#123;template &lt;typename T&gt;class vector&#123;    public:    vector(int size=10)    &#123;        _first = new T[size];           _last = _first;        _end = _first + size;    &#125;    ~vector()    &#123;  ...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#content-inner">5</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/eln.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">yolo</div><div class="author-info-description">弹指韶光，素华流年。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">39</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Yolo-ZZY"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/Yolo-ZZY" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="/2661572212@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/356247388" target="_blank" title="Bilibili"><i class="fab fa-bilibili" style="color: #00aeec;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">我要睡觉！<br />2661572212@qq.com</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/05/14/markdown%E7%9B%B8%E5%85%B3/" title="markdown相关">markdown相关</a><time datetime="2025-05-14T13:14:11.417Z" title="发表于 2025-05-14 21:14:11">2025-05-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/05/14/%E6%8C%87%E5%90%91%E7%B1%BB%E6%88%90%E5%91%98%E7%9A%84%E6%8C%87%E9%92%88/" title="指向类成员的指针">指向类成员的指针</a><time datetime="2025-05-14T12:31:31.415Z" title="发表于 2025-05-14 20:31:31">2025-05-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/05/14/%E6%8E%8C%E6%8F%A1%E7%B1%BB%E7%9A%84%E5%90%84%E7%A7%8D%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95%E5%8F%8A%E5%8C%BA%E5%88%AB/" title="掌握类的各种成员方法及区别">掌握类的各种成员方法及区别</a><time datetime="2025-05-14T12:31:31.409Z" title="发表于 2025-05-14 20:31:31">2025-05-14</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/c-%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/"><span class="card-category-list-name">c++初级学习</span><span class="card-category-list-count">20</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/markdown/"><span class="card-category-list-name">markdown</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/win/"><span class="card-category-list-name">win</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%97%E8%88%AA%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0/"><span class="card-category-list-name">南航面试复习</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" style="font-size: 1.1em; color: #999">构造函数</a> <a href="/tags/%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95/" style="font-size: 1.1em; color: #999">类的成员方法</a> <a href="/tags/Github/" style="font-size: 1.1em; color: #999">Github</a> <a href="/tags/%E6%B5%85%E6%8B%B7%E8%B4%9D%E6%B7%B1%E6%8B%B7%E8%B4%9D/" style="font-size: 1.1em; color: #999">浅拷贝深拷贝</a> <a href="/tags/vscode/" style="font-size: 1.1em; color: #999">vscode</a> <a href="/tags/%E9%9A%8F%E6%89%8B%E4%B8%80%E5%86%99/" style="font-size: 1.1em; color: #999">随手一写</a> <a href="/tags/gitbash/" style="font-size: 1.1em; color: #999">gitbash</a> <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" style="font-size: 1.1em; color: #999">二分查找</a> <a href="/tags/allocator/" style="font-size: 1.1em; color: #999">allocator</a> <a href="/tags/butterfly/" style="font-size: 1.5em; color: #99a9bf">butterfly</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/linux/" style="font-size: 1.1em; color: #999">linux</a> <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" style="font-size: 1.1em; color: #999">快捷键</a> <a href="/tags/ERPNEXT/" style="font-size: 1.3em; color: #99a1ac">ERPNEXT</a> <a href="/tags/mysql/" style="font-size: 1.3em; color: #99a1ac">mysql</a> <a href="/tags/%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/" style="font-size: 1.1em; color: #999">函数模板</a> <a href="/tags/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/" style="font-size: 1.1em; color: #999">构造函数与析构函数</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83/" style="font-size: 1.1em; color: #999">数据中心</a> <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 1.1em; color: #999">虚拟机</a> <a href="/tags/%E6%88%90%E5%91%98%E6%8C%87%E9%92%88/" style="font-size: 1.1em; color: #999">成员指针</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/05/">
+            <span class="card-archive-list-date">
+              五月 2025
+            </span>
+            <span class="card-archive-list-count">38</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/12/">
+            <span class="card-archive-list-date">
+              十二月 2024
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">40</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-05-14T13:46:04.344Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By yolo</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">你好啊！欢迎！！</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = "H A P P Y !"
+        sub.unshift(data.hitokoto, from)
+        typedJSFn.init(sub)
+      } else {
+        document.getElementById('subtitle').textContent = data.hitokoto
+      }
+    })
+}
+typedJSFn.run(subtitleType)
+</script></div><script src="/js/jquery.js"></script><script src="/js/foot.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="50" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="提笔忘字" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><!-- hexo injector body_end start --><script data-pjax>
+    function butterfly_categories_card_injector_config(){
+      var parent_div_git = document.getElementsByClassName('recent-posts')[0];
+      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/raidenshogun.jpg);"> <a class="categoryBar-list-link" href="categories/c-初级学习/">c++初级学习</a><span class="categoryBar-list-count">20</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/shenhe.jpg);"> <a class="categoryBar-list-link" href="categories/实习/">实习</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/shenlilinghua2.jpg);"> <a class="categoryBar-list-link" href="categories/markdown/">markdown</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/ningguang.png);"> <a class="categoryBar-list-link" href="categories/南航面试复习/">南航面试复习</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/ganyu.jpg);"> <a class="categoryBar-list-link" href="categories/win/">win</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/6legs.jpg);"> <a class="categoryBar-list-link" href="categories/我的世界/">我的世界</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/jingliu.jpg);"> <a class="categoryBar-list-link" href="categories/算法/">算法</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/rosaria.jpg);"> <a class="categoryBar-list-link" href="categories/搭建个人博客/">搭建个人博客</a><span class="categoryBar-list-count">6</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/acheron.png);"> <a class="categoryBar-list-link" href="categories/毕业设计/">毕业设计</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/robin.jpg);"> <a class="categoryBar-list-link" href="categories/随想/">随想</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/ruanmei.jpg);"> <a class="categoryBar-list-link" href="categories/快捷键/">快捷键</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/silverwolf.jpg);"> <a class="categoryBar-list-link" href="categories/玩机/">玩机</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li></ul></div></div>';
+      console.log('已挂载butterfly_categories_card')
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      }
+    if( document.getElementsByClassName('recent-posts')[0] && (location.pathname ==='/'|| '/' ==='all')){
+    butterfly_categories_card_injector_config()
+    }
+  </script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body></html>

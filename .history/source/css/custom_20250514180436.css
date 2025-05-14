@@ -49,23 +49,23 @@
 #aside-content>.card-widget,
 #aside-content>.sticky_layout>.card-widget {
   /* 设置白色背景，透明度为0.6 */
-  background: rgba(255, 255, 255, .7);
+  background: rgba(255, 255, 255, .6);
 }
 
 /* 文章页面 - 半透明背景 */
 .layout>#post {
   /* 设置白色背景，透明度为0.6 */
-  background: rgba(255, 255, 255, .7);
+  background: rgba(255, 255, 255, .6);
 }
 
 /* 分类页面 - 半透明背景 */
 .layout>#page {
   /* 设置白色背景，透明度为0.6 */
-  background: rgba(255, 255, 255, .7);
+  background: rgba(255, 255, 255, .6);
 }
 
 /* 时间轴页面 - 半透明背景 */
 .layout>#archive {
   /* 设置白色背景，透明度为0.6 */
-  background: rgba(255, 255, 255, .7);
+  background: rgba(255, 255, 255, .6);
 }

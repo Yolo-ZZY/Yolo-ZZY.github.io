@@ -117,9 +117,8 @@ cover:
   archives_enable: true
   # When cover is not set, the default cover is displayed
   position: both
-  default_cover: 
+  default_cover:
     # - xxx.jpg
-
 
 # Replace Broken Images
 error_img:
@@ -196,7 +195,7 @@ subtitle:
 # 5: Info displayed on the cover
 # 6: Masonry layout - Cover on top, info on the bottom
 # 7: Masonry layout - Info displayed on the cover
-index_layout: 6
+index_layout: 3
 
 # Display the article introduction on homepage
 # 1: description

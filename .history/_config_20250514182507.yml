@@ -195,4 +195,4 @@ live2d:
 
 #双栏美化
 butterfly_article_double_row:
-  enable: false
+  enable: true

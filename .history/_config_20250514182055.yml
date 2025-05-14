@@ -190,9 +190,3 @@ live2d:
   mobile:
     show: false
      # 手机中是否展示
-
-
-
-#双栏美化
-butterfly_article_double_row:
-  enable: false

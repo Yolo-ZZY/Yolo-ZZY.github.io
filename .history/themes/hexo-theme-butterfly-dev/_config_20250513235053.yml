@@ -218,7 +218,7 @@ toc:
 
 post_copyright:
   enable: true
-  decode: true
+  decode: false
   author_href:
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -280,7 +280,7 @@ footer:
     since: 2019
   custom_text: 你好啊！欢迎！！
   # Copyright of theme and framework
-  copyright: true
+  copyright: false
 
 # --------------------------------------
 # Aside Settings
@@ -1048,7 +1048,7 @@ inject:
      - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
 
   bottom:
-    - <script src="/js/jquery.js"></script>
+    - <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     - <script src="/js/foot.js"></script>
 
 

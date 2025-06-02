@@ -1,0 +1,26 @@
+{
+    "models": [
+        "Potion-Maker/Pio",
+        "Potion-Maker/Tia",
+        
+            "HyperdimensionNeptunia/neptune_classic",
+            "HyperdimensionNeptunia/nepnep",
+            "HyperdimensionNeptunia/nepswim",
+            "HyperdimensionNeptunia/noir_classic",
+            "HyperdimensionNeptunia/noir",
+            "HyperdimensionNeptunia/noireswim",
+            "HyperdimensionNeptunia/vert_classic",
+            "HyperdimensionNeptunia/vert_normal",
+            "HyperdimensionNeptunia/vert_swimwear",
+            "HyperdimensionNeptunia/nepgear",
+            "HyperdimensionNeptunia/nepgearswim"
+    
+
+    ],
+    "messages": [
+        "来自 Potion Maker 的 Pio 酱 ~",
+        "来自 Potion Maker 的 Tia 酱 ~",
+        "Nep! Nep! 超次元游戏：海王星 系列"
+
+    ]
+}

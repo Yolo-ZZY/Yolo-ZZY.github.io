@@ -2,8 +2,7 @@
 title: const.一级指针与引用的结合引用
 date: ###### Sun Feb 16 23:47:05 CST 2025
 tags: 
-- C++
-- C++基础
+- c++
 categories: c++初级学习
 cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/frieren.png
 ---

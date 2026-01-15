@@ -1,5 +1,5 @@
 ---
-title: new,malloc,free,delete
+title: new,malloc,free,delete，引用和指针
 date: 2025年1月8日15点22分
 tags:
 - C++

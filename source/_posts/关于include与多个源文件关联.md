@@ -1,10 +1,11 @@
 ---
 title: 关于include以及多个文件间声明与调用
-date: ###### Sun Feb 16 23:43:23 CST 2025
+date: 2025-02-16 23:43:23
 tags: 
 - C++
-categories: c++初级学习
-cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/2233.png
+categories:
+  - [编程语言与算法, C/C++]
+
 ---
 
 # 关于include以及多个文件间声明与调用

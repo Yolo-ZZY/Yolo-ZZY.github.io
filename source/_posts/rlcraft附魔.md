@@ -1,11 +1,12 @@
 ---
-title: redraft相关
-date: ###### Sun Feb 16 23:46:42 CST 2025
+title: RLCraft附魔指南
+date: 2025-02-16 23:46:42
 tags: 
 - rlcraft
 - mc
-categories: 我的世界
-cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/mchome.png
+categories:
+  - [生活与随想, 游戏]
+
 ---
 
 # rlcraft附魔

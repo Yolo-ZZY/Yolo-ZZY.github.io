@@ -1,11 +1,12 @@
 ---
 title:  C++基础部分
-date: 2025年1月7日13点48分
+date: 2025-01-07 13:48:00
 tags:
 - C++
 - C++基础
-categories: c++初级学习
-cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/snowbreak.jpg
+categories:
+  - [编程语言与算法, C/C++]
+
 ---
 
 ![image-20250107134923183](https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20250107134923183)

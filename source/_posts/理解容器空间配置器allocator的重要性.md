@@ -1,11 +1,12 @@
 ---
 title: 理解容器空间配置器allocator的重要性
-date: ###### Sun Mar 9 19:22:32 CST 2025
+date: 2025-03-09 19:22:32
 tags: 
 - [allocator]
 - C++模板编程
-categories: [c++初级学习]
-cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/silverwolf.jpg
+categories:
+  - [编程语言与算法, C/C++]
+
 ---
 
 # 理解容器空间配置器allocator的重要性

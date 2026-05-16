@@ -4,7 +4,7 @@ date: 2024-12-29 15:40:47
 tags: 
 - C++
 - C++基础
-cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/vertin.png
+
 ---
 
 # 编译链接原理

@@ -1,11 +1,12 @@
 ---
 title: 全面掌握const
-date: ###### Sun Feb 16 23:44:57 CST 2025
+date: 2025-02-16 23:44:57
 tags: 
 - C++
 - C++基础
-categories: c++初级学习
-cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/castorice.jpg
+categories:
+  - [编程语言与算法, C/C++]
+
 ---
 # const
 ``` c++

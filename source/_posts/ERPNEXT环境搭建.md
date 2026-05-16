@@ -1,11 +1,12 @@
 ---
 title: ERPNEXT环境搭建
-date: ###### Mon Feb 17 16:32:05 CST 2025
+date: 2025-02-17 16:32:05
 tags: 
 - ERPNEXT
 - 虚拟机
-categories: 实习
-cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/fenny.jpg
+categories:
+  - [项目与实践, 实习与开发环境]
+
 ---
 # ERPNEXT环境搭建
 ## 配置虚拟机环境

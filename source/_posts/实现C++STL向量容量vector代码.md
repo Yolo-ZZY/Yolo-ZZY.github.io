@@ -1,11 +1,12 @@
 ---
 title: C++STL向量容量vector代码
-date: ###### Fri Mar 7 19:05:39 CST 2025
+date: 2025-03-07 19:05:39
 tags: 
 - [C++, STL]
 - C++模板编程
-categories: [c++初级学习]
-cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/blade.jpg
+categories:
+  - [编程语言与算法, C/C++]
+
 ---
 # 数组
 
@@ -76,6 +77,70 @@ for(auto w:weight)
 }
 
 ```
+``` c++
+int main()
+{
+	vector<int> numbers;
+	int num;
+	cout << "请输入整数" << endl;
+	while (cin >> num)
+	{
+		numbers.push_back(num);	//push_back添加元素到容器的尾部
+	}
+	while (!numbers.empty())	//empty()判断容器是否为空
+	{
+		cout << numbers.back() << endl;
+		numbers.pop_back();
+	}
+}
+```
+# 统计一个句子中有多少英文单词
+``` c++
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+
+int main()
+{
+while (true)
+{ 
+	string sentence;
+	cout<<"Enter an English sentence: "<<endl;
+	getline(cin,sentence);
+	int i = 0;
+	int count = 0;
+	bool flag = false;
+
+	while (sentence[i]) //注意这里非空就判断为真
+	{ 
+		if ((sentence[i] >= 'A' && sentence[i] <= 'Z') || (sentence[i] >= 'a' && sentence[i] <= 'z')||sentence[i] == '-')
+		{
+			if (flag == false)
+			{
+				flag = true;
+				count++;
+				i++;
+			}
+			else
+			{
+				i++;
+			}
+		}
+		else
+		{
+			flag = false;
+			i++;
+		}
+	}
+	cout<<"There are "<<count<<" words in the sentence."<<endl;
+}
+}
+```
+
+
+
 # C++STL向量容量vector代码（顺序容器）
 容器： SeqStack Queue vector
 ![20250307191032](https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/20250307191032.png)

@@ -1,9 +1,10 @@
 ---
 title: 在多端上同步部署hexo
-date: ###### Sun Feb 16 23:45:39 CST 2025
+date: 2025-02-16 23:45:39
 tags: hexo
-categories: 搭建个人博客
-cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/yaemiko.jpg
+categories:
+  - [项目与实践, 博客搭建]
+
 ---
 
 # 在多端上同步部署hexo

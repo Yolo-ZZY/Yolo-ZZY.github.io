@@ -1,9 +1,10 @@
 ---
 title: "mysql数据库面试"
-date: ###### Thu Mar 13 16:26:30 CST 2025
+date: 2025-03-13 16:26:30
 tags: [mysql]
-categories: [南航面试复习]
-cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/arcana.jpg
+categories:
+  - [求职与面试, 南航面试复习]
+
 ---
 
 

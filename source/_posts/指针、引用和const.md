@@ -1,13 +1,14 @@
 ---
-title: 指针、引用和cinst
-date: ###### Fri Jan 9 13:08:10 CST 2026
+title: 指针、引用和const
+date: 2026-01-09 13:08:10
 tags: 
 - C++
 - 指针
 - 引用
 - const
-categories: c++初级学习
-cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/6legs.jpg
+categories:
+  - [编程语言与算法, C/C++]
+
 ---
 # 指针
 new分配内存在堆上

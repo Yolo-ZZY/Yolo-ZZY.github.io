@@ -1,11 +1,12 @@
 ---
 title: "模拟实现string类型代码"
-date: ###### Fri Mar 21 17:50:14 CST 2025
+date: 2025-03-21 17:50:14
 tags: 
 - [string]
 - C++运算符重载
-categories: [c++初级学习]
-cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/xueyi.png
+categories:
+  - [编程语言与算法, C/C++]
+
 ---
 # 模拟实现string类型代码
 ``` c++

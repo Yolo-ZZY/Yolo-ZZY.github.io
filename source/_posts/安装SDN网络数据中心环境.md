@@ -1,14 +1,15 @@
 ---
 title: 安装SDN网络数据中心环境
-date: ###### Fri Mar 28 17:13:49 CST 2025
+date: 2025-03-28 17:13:49
 tags: 
 - SDN
 - 数据中心
 - 网络
 - 深度学习
 - 毕设
-categories: 毕业设计
-cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/shenhe.jpg
+categories:
+  - [项目与实践, 实习与开发环境]
+
 ---
 # 失败安装
 ## 1. 虚拟机ubuntu16.04

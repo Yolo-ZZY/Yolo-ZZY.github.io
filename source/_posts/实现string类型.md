@@ -1,11 +1,12 @@
 ---
 title: 实现string类型
-date: ###### Fri Mar 21 15:48:21 CST 2025
+date: 2025-03-21 15:48:21
 tags: 
 - string
 - C++运算符重载
-categories: [c++初级学习]
-cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/shenlilinghua.png
+categories:
+  - [编程语言与算法, C/C++]
+
 ---
 本身没有string只有char，库<string>实现了一系列操作
 ``` c++

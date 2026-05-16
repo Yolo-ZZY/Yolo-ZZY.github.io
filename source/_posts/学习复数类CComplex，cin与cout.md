@@ -1,10 +1,11 @@
 ---
-title: "学习复数类CComplex"
-date: ###### Fri Mar 21 15:48:21 CST 2025
+title: "学习复数类CComplex，cin与cout"
+date: 2025-03-21 15:48:21
 tags: 
 - C++运算符重载
-categories: [c++初级学习]
-cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/shenlilinghua.png
+categories:
+  - [编程语言与算法, C/C++]
+
 ---
 
 # 学习复数类CComplex
@@ -111,3 +112,7 @@ istream& operator>>(istream& in, CComplex& c)
 }
 
 ```
+
+cin<<只能输入一段字符串，中间不能有空格
+想要一段话，使用cin.getline(指针，大小) 这里指针必须是char
+或者getline(cin,sentence)

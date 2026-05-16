@@ -1,9 +1,9 @@
 ---
 title: "windows踩坑合集"
-date: ###### Sun May 4 15:49:39 CST 2025
+date: 2025-05-04 15:49:39
 tags: [git, gitbash]
-categories: [win]
-cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/default.jpg
+categories:
+  - [工具与折腾, 效率工具]
 swiper_index: 1 #置顶轮播图顺序，非负整数，数字越大越靠前
 ---
 

@@ -1,12 +1,13 @@
 ---
 title: nginx配置ssl
-date: ###### Mon Jun 2 22:48:25 CST 2025
+date: 2025-06-02 22:48:25
 tags: 
 - nginx
 - ssl
 - linux
-categories: 搭建个人博客
-cover: https://raw.githubusercontent.com/Yolo-ZZY/Image/main/cover1.jpg
+categories:
+  - [项目与实践, 博客搭建]
+
 ---
 
 # nginx配置ssl

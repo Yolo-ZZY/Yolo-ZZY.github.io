@@ -1,9 +1,10 @@
 ---
 title: 在vscode中写c
-date: ###### Wed Feb 19 18:35:19 CST 2025
+date: 2025-02-19 18:35:19
 tags: [c,vscode]
-categories: c++初级学习
-cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/raidenshogun.jpg
+categories:
+  - [编程语言与算法, C/C++]
+
 ---
 
 # 1.下载mingw-w64

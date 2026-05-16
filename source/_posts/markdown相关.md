@@ -1,9 +1,10 @@
 ---
 title: markdown相关
 tags: [markdown]
-categories: [markdown]
-date: ###### Wed May 14 21:14:39 CST 2025
-cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/ganyu.jpg
+categories:
+  - [工具与折腾, 效率工具]
+date: 2025-05-14 21:14:39
+
 ---
 
 1. 关于markdown换行

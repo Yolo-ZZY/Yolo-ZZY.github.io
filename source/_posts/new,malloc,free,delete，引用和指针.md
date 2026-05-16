@@ -1,13 +1,14 @@
 ---
 title: new,malloc,free,delete，引用和指针
-date: 2025年1月8日15点22分
+date: 2025-01-08 15:22:00
 tags:
 - C++
 - C++基础
 - 引用
 - 指针
-categories: c++初级学习
-cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/zanni.jpg
+categories:
+  - [编程语言与算法, C/C++]
+
 ---
 # malloc,free;new,delete
 **malloc和free是c的库函数

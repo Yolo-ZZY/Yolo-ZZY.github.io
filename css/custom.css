@@ -1,0 +1,74 @@
+#footer {
+    background: transparent !important;
+}
+#page-header {
+    background: transparent !important;
+}
+
+/* 白天模式遮罩透明 */
+#footer::before {
+    background: transparent !important;
+}
+#page-header::before {
+    background: transparent !important;
+}
+
+/* 夜间模式遮罩透明 */
+[data-theme="dark"] #footer::before {
+    background: transparent !important;
+}
+[data-theme="dark"] #page-header::before {
+    background: transparent !important;
+}
+
+
+/* 页面整体背景 - 渐变色 */
+#web_bg {
+  /* 使用线性渐变，从底部到顶部 */
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  
+  /* 确保背景不会重复 */
+  background-repeat: no-repeat;
+  
+
+  
+  /* 背景尺寸覆盖整个视口 */
+  background-size: cover;
+}
+
+/* 主页所有文章页面背景 - 半透明背景 */
+#aside_content .card-widget,
+#recent-posts>.recent-post-item,
+.layout_page>div:first-child:not(.recent-posts),
+.layout_post>#page,
+.layout_post>#post,
+.read-mode .layout_post>#post {
+  /* 设置白色背景，透明度为0.5 */
+  background: rgba(255, 255, 255, .5);
+}
+
+/* 侧边栏页面 - 半透明背景 */
+#aside-content>.card-widget,
+#aside-content>.sticky_layout>.card-widget {
+  /* 设置白色背景，透明度为0.6 */
+  background: rgba(255, 255, 255, .6);
+}
+
+/* 文章页面 - 半透明背景 */
+.layout>#post {
+  /* 设置白色背景，透明度为0.6 */
+  background: rgba(255, 255, 255, .6);
+}
+
+/* 分类页面 - 半透明背景 */
+.layout>#page {
+  /* 设置白色背景，透明度为0.6 */
+  background: rgba(255, 255, 255, .6);
+}
+
+/* 时间轴页面 - 半透明背景 */
+.layout>#archive {
+  /* 设置白色背景，透明度为0.6 */
+  background: rgba(255, 255, 255, .6);
+}
+

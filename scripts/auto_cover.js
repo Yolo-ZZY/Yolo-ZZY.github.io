@@ -18,7 +18,7 @@ function fetchCovers() {
             const covers = files
               .map(f => f.name)
               .filter(name => name.match(/^cover\d+\.(jpg|png)$/i))
-              .map(name => `https://ghproxy.net/https://raw.githubusercontent.com/Yolo-ZZY/Image/main/${name}`);
+              .map(name => `https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/${name}`);
             if (covers.length > 0) {
               cachedCovers = covers;
             }

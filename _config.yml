@@ -132,33 +132,33 @@ categoryBar:
   row: 1 #显示行数，默认两行，超过行数切换为滚动显示
   message:
     - descr: 
-      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/raidenshogun.jpg
+      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/cover1.jpg
     - descr: 
-      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/shenhe.jpg
+      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/cover2.png
     - descr: 
-      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/shenlilinghua2.jpg
+      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/cover3.jpg
     - descr: 
-      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/ningguang.png
+      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/cover4.jpg
     - descr: 
-      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/ganyu.jpg
+      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/cover5.jpg
     - descr: 
-      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/6legs.jpg
+      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/cover6.jpg
     - descr: 
-      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/jingliu.jpg
+      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/cover7.jpeg
     - descr: 
-      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/rosaria.jpg
+      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/cover8.png
     - descr: 
-      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/acheron.png
+      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/cover9.jpg
     - descr: 
-      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/robin.jpg
+      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/cover10.jpg
     - descr: 
-      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/ruanmei.jpg
+      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/cover11.jpg
     - descr: 
-      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/silverwolf.jpg
+      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/cover12.png
     - descr: 
-      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/blade.jpg
+      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/cover13.jpg
     - descr: 
-      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/castorice.jpg
+      cover: https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/cover14.jpg
 
   custom_css: /css/categorybar.css
 

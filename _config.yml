@@ -93,6 +93,7 @@ pagination_dir: page
 include:
 exclude:
 ignore:
+  - '**/img/beach.png'
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
@@ -170,7 +171,7 @@ categoryBar:
 swiper:
   enable: true # 开关
   priority: 5 #过滤器优先权
-  enable_page: all # 应用页面
+  enable_page: / # 应用页面
   timemode: date #date/updated
   layout: # 挂载容器类型
     type: id
@@ -181,6 +182,3 @@ swiper:
   swiper_js: /js/swiper.min.js #swiper js依赖
   custom_css: /css/swiperstyle.css # 适配主题样式补丁
   custom_js: /js/swiper_init.js # swiper初始化方法
-
-live2d:
-  enable: true

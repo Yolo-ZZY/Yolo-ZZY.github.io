@@ -108,7 +108,7 @@ footer_img: false
 
 # 网页背景Website Background
 # Can set it to color or image url
-background: /img/beach.png
+background: /img/beach-optimized.jpg
 
 cover:
   # Disable the cover or not
@@ -117,7 +117,7 @@ cover:
   archives_enable: false
   # When cover is not set, the default cover is displayed
   position: both
-  default_cover: /img/beach.png
+  default_cover: /img/beach-optimized.jpg
 
 # Replace Broken Images
 error_img: 
@@ -795,7 +795,7 @@ mask:
 
 # Loading Animation
 preloader:
-  enable: true
+  enable: false
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
@@ -804,7 +804,7 @@ preloader:
   pace_css_url:
 
 # Page Transition
-enter_transitions: true
+enter_transitions: false
 
 # Default display mode - light (default) / dark
 display_mode: light
@@ -1056,7 +1056,6 @@ inject:
   bottom:
     - <script src="/js/jquery.js"></script>
     - <script src="/js/foot.js"></script>
-    - <script src="/live2d-widget/dist/autoload.js"></script>
 
 
 
@@ -1152,5 +1151,4 @@ swiper:
   swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js #swiper js依赖
   custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css # 适配主题样式补丁
   custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js # swiper初始化方法
-
 

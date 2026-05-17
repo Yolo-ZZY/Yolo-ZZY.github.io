@@ -108,7 +108,7 @@ deploy:
   branch: master
  # github: git@github.com:yolo-zzy/yolo-zzy.github.io.git
 - type: git
-  repo: git@github.com:yolo-zzy/yolo-zzy.github.io.git
+  repo: git@github.com:Yolo-ZZY/Yolo-ZZY.github.io.git
   branch: master
 
 

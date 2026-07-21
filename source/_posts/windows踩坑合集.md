@@ -1,10 +1,15 @@
 ---
 title: "windows踩坑合集"
 date: 2025-05-04 15:49:39
-tags: [git, gitbash]
+updated: 2025-05-04 15:49:39
 categories:
-  - [工具与折腾, 效率工具]
-swiper_index: 1 #置顶轮播图顺序，非负整数，数字越大越靠前
+  - ["工具与折腾", "效率工具"]
+tags:
+  - "git"
+  - "gitbash"
+description: "参考： https://blog.csdn.net/qq41019529/article/details/110139830 1. regedit打开注册表，\\HKEYCLASSESROOT\\Directory\\Background\\..."
+cover: ""
+swiper_index: 1
 ---
 
 

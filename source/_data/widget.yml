@@ -1,0 +1,9 @@
+top:
+  - class_name: card-search
+    id_name: card-search
+    icon: fas fa-search
+    name: 搜索
+    html: |
+      <button type="button" class="aside-search-trigger" onclick="document.querySelector('#search-button > .search').click()">
+        搜索博客内容
+      </button>

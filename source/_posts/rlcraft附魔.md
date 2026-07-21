@@ -1,12 +1,14 @@
 ---
-title: RLCraft附魔指南
+title: "RLCraft附魔指南"
 date: 2025-02-16 23:46:42
-tags: 
-- rlcraft
-- mc
+updated: 2025-02-16 23:46:42
 categories:
-  - [生活与随想, 游戏]
-
+  - ["生活与随想", "游戏"]
+tags:
+  - "rlcraft"
+  - "mc"
+description: "RLCraft附魔指南"
+cover: ""
 ---
 
 # rlcraft附魔

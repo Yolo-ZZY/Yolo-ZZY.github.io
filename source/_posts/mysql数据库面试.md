@@ -1,10 +1,13 @@
 ---
 title: "mysql数据库面试"
 date: 2025-03-13 16:26:30
-tags: [mysql]
+updated: 2025-03-13 16:26:30
 categories:
-  - [求职与面试, 南航面试复习]
-
+  - ["求职与面试", "南航面试复习"]
+tags:
+  - "mysql"
+description: "mysql 关系型数据库，类似与一张excel表格 1. 行 对于记录， 列 对于属性"
+cover: ""
 ---
 
 

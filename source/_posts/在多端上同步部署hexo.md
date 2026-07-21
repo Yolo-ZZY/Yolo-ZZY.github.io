@@ -1,10 +1,13 @@
 ---
-title: 在多端上同步部署hexo
+title: "在多端上同步部署hexo"
 date: 2025-02-16 23:45:39
-tags: hexo
+updated: 2025-02-16 23:45:39
 categories:
-  - [项目与实践, 博客搭建]
-
+  - ["项目与实践", "博客搭建"]
+tags:
+  - "hexo"
+description: "参考https://blog.csdn.net/K1052176873/article/details/122879462"
+cover: ""
 ---
 
 # 在多端上同步部署hexo

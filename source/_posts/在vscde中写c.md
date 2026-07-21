@@ -1,10 +1,14 @@
 ---
-title: 在vscode中写c
+title: "在vscode中写c"
 date: 2025-02-19 18:35:19
-tags: [c,vscode]
+updated: 2025-02-19 18:35:19
 categories:
-  - [编程语言与算法, C/C++]
-
+  - ["编程语言与算法", "C/C++"]
+tags:
+  - "c"
+  - "vscode"
+description: "在网盘里了 将bin的路径添加到path中 ctrl+shift+p -》搜索c/c++，选ui配置-》下面有个模式也要改成mingw64 tasks.json中修改为这个"
+cover: ""
 ---
 
 # 1.下载mingw-w64

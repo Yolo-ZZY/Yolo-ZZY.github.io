@@ -1,14 +1,16 @@
 ---
-title: 指针、引用和const
+title: "指针、引用和const"
 date: 2026-01-09 13:08:10
-tags: 
-- C++
-- 指针
-- 引用
-- const
+updated: 2026-01-09 13:08:10
 categories:
-  - [编程语言与算法, C/C++]
-
+  - ["编程语言与算法", "C/C++"]
+tags:
+  - "C++"
+  - "指针"
+  - "引用"
+  - "const"
+description: "int a=10; int &nickname=a; nickname就是a的别名，对nickname操作就是对a操作"
+cover: ""
 ---
 # 指针
 new分配内存在堆上

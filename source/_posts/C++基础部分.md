@@ -1,12 +1,14 @@
 ---
-title:  C++基础部分
+title: "C++基础部分"
 date: 2025-01-07 13:48:00
-tags:
-- C++
-- C++基础
+updated: 2025-01-07 13:48:00
 categories:
-  - [编程语言与算法, C/C++]
-
+  - ["编程语言与算法", "C/C++"]
+tags:
+  - "C++"
+  - "C++基础"
+description: "----- 上述为先 定义 ，后 调用 ；下为先 声明 ，后调用，最后定义（或定义在另一个文件）"
+cover: ""
 ---
 
 ![image-20250107134923183](https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20250107134923183)

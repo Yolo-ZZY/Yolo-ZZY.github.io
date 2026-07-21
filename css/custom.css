@@ -72,3 +72,115 @@
   background: rgba(255, 255, 255, .6);
 }
 
+/* 首页知识导航：一级分类和完整归档入口位于最新文章之前。 */
+.home-knowledge-nav {
+  margin-bottom: 1.2rem;
+  padding: 1.2rem 1.4rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .68);
+  box-shadow: 0 3px 8px 6px rgba(7, 17, 27, .06);
+}
+
+.home-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: .9rem;
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+.home-section-title,
+.home-category-entry {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.home-category-entry {
+  padding: .25rem .4rem;
+  color: var(--font-color);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.home-category-entry:hover {
+  color: var(--btn-bg);
+}
+
+.home-category-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+}
+
+.home-category-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .45rem .8rem;
+  border: 1px solid rgba(73, 177, 245, .22);
+  border-radius: 999px;
+  color: var(--font-color);
+  background: rgba(73, 177, 245, .08);
+}
+
+.home-category-link:hover {
+  color: #fff;
+  background: var(--btn-bg);
+}
+
+.home-category-link small {
+  opacity: .65;
+}
+
+.aside-search-trigger {
+  width: 100%;
+  padding: .6rem .8rem;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  background: var(--btn-bg);
+  cursor: pointer;
+}
+
+[data-theme='dark'] .home-knowledge-nav {
+  background: rgba(18, 18, 18, .72);
+}
+
+.site-runtime {
+  margin-top: .35rem;
+}
+
+.runtime-number {
+  font-weight: 600;
+}
+
+.runtime-days {
+  color: #afb4db;
+}
+
+.runtime-hours {
+  color: #f391a9;
+}
+
+.runtime-minutes {
+  color: #fdb933;
+}
+
+.runtime-seconds {
+  color: #a3cf62;
+}
+
+@media screen and (max-width: 768px) {
+  .home-knowledge-nav {
+    padding: 1rem;
+  }
+
+  .home-section-heading {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
+

@@ -4,6 +4,126 @@
   
     
     <entry>
+      <title>Ubuntu 搭建 Claude Code 指南</title>
+      <link href="/2026/05/17/Ubuntu%20%E6%90%AD%E5%BB%BA%20Claude%20Code%E6%8C%87%E5%8D%97/"/>
+      <url>/2026/05/17/Ubuntu%20%E6%90%AD%E5%BB%BA%20Claude%20Code%E6%8C%87%E5%8D%97/</url>
+      
+        <content type="html"><![CDATA[<h1 id="📝-Linux-Ubuntu-搭建-Claude-Code-官方指南-——-基于-DeepSeek-后端驱动"><a href="#📝-Linux-Ubuntu-搭建-Claude-Code-官方指南-——-基于-DeepSeek-后端驱动" class="headerlink" title="📝 Linux (Ubuntu) 搭建 Claude Code 官方指南 —— 基于 DeepSeek 后端驱动"></a>📝 Linux (Ubuntu) 搭建 Claude Code 官方指南 —— 基于 DeepSeek 后端驱动</h1><p>本指南记录了在无图形界面（CLI）的 Ubuntu 系统上，如何利用 <strong>DeepSeek</strong> 的 Anthropic 兼容协议，完美搭建并驱动 Anthropic 官方命令行 AI 编码助手 <strong>Claude Code</strong> 的全过程。</p><hr><h2 id="🛠️-一、前置环境检查与准备"><a href="#🛠️-一、前置环境检查与准备" class="headerlink" title="🛠️ 一、前置环境检查与准备"></a>🛠️ 一、前置环境检查与准备</h2><p>Claude Code 依赖较高版本的 Node.js 环境以及 Git 版本控制。</p><h3 id="1-环境版本要求"><a href="#1-环境版本要求" class="headerlink" title="1. 环境版本要求"></a>1. 环境版本要求</h3><ul><li><strong>Node.js</strong>: $\ge \text{v18.0.0}$ (推荐 v20 或 v22 LTS)</li><li><strong>Git</strong>: 现代通用版本即可</li></ul><h3 id="2-环境检查命令"><a href="#2-环境检查命令" class="headerlink" title="2. 环境检查命令"></a>2. 环境检查命令</h3><p>Bash</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 检查现有版本</span><br><span class="line">node -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure><h3 id="3-环境安装-更新（如版本不符时使用）"><a href="#3-环境安装-更新（如版本不符时使用）" class="headerlink" title="3. 环境安装&#x2F;更新（如版本不符时使用）"></a>3. 环境安装&#x2F;更新（如版本不符时使用）</h3><p>Bash</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 更新系统包源</span><br><span class="line">sudo apt update &amp;&amp; sudo apt upgrade -y</span><br><span class="line"></span><br><span class="line"># 引入 NodeSource 官方 Node.js 22.x 源并安装</span><br><span class="line">curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -</span><br><span class="line">sudo apt install -y nodejs git</span><br></pre></td></tr></table></figure><blockquote><p>💡 <strong>避坑提示</strong>：若运行 <code>apt update</code> 提示 <code>Could not get lock /var/lib/apt/lists/lock</code>，说明后台有自动更新在运行。可使用 <code>sudo kill &lt;PID&gt;</code> 结束提示中的进程，或删除锁文件：<code>sudo rm /var/lib/apt/lists/lock</code>。</p></blockquote><hr><h2 id="🚀-二、安装-Claude-Code"><a href="#🚀-二、安装-Claude-Code" class="headerlink" title="🚀 二、安装 Claude Code"></a>🚀 二、安装 Claude Code</h2><p>使用 npm 全局安装 Anthropic 官方提供的 Claude Code 客户端：</p><p>Bash</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 若为 root 用户可去掉 sudo</span><br><span class="line">sudo npm install -g @anthropic-ai/claude-code</span><br></pre></td></tr></table></figure><ul><li><strong>验证安装</strong>：<code>claude --version</code></li></ul><hr><h2 id="🔑-三、配置-DeepSeek-环境变量"><a href="#🔑-三、配置-DeepSeek-环境变量" class="headerlink" title="🔑 三、配置 DeepSeek 环境变量"></a>🔑 三、配置 DeepSeek 环境变量</h2><p>由于 DeepSeek 官方已原生兼容 Anthropic 的 API 协议与 Tool Calling 机制，我们通过在 Linux 系统中注入专属环境变量，将 Claude Code 的“大脑”彻底替换为 DeepSeek。</p><h3 id="1-永久配置（推荐）"><a href="#1-永久配置（推荐）" class="headerlink" title="1. 永久配置（推荐）"></a>1. 永久配置（推荐）</h3><p>为了避免每次打开 SSH 终端都需要重新配置，建议将变量写入用户的 shell 配置文件中（以 <code>root</code> 用户的 <code>~/.bashrc</code> 为例）：</p><p>Bash</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano ~/.bashrc</span><br></pre></td></tr></table></figure><p>在文件最底部粘贴以下 DeepSeek 官方扩展配置：</p><p>Bash</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># ==========================================</span><br><span class="line"># DeepSeek 官方扩展配置 —— 驱动 Claude Code</span><br><span class="line"># ==========================================</span><br><span class="line">export ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic</span><br><span class="line">export ANTHROPIC_AUTH_TOKEN=&quot;你的_DEEPSEEK_API_KEY_🔑&quot;</span><br><span class="line"></span><br><span class="line"># 模型路由重写</span><br><span class="line">export ANTHROPIC_MODEL=deepseek-v4-pro</span><br><span class="line">export ANTHROPIC_DEFAULT_OPUS_MODEL=deepseek-v4-pro</span><br><span class="line">export ANTHROPIC_DEFAULT_SONNET_MODEL=deepseek-v4-pro</span><br><span class="line">export ANTHROPIC_DEFAULT_HAIKU_MODEL=deepseek-v4-flash</span><br><span class="line">export CLAUDE_CODE_SUBAGENT_MODEL=deepseek-v4-flash</span><br><span class="line"></span><br><span class="line"># 性能配置（开启最大化推理能力）</span><br><span class="line">export CLAUDE_CODE_EFFORT_LEVEL=max</span><br></pre></td></tr></table></figure><blockquote><p>⚠️ <strong>注意</strong>：从官方文档复制时，需确保模型名称后没有携带终端高亮残留字符（如 <code>[1m]</code>），保持如上所示的纯净字符串。</p></blockquote><h3 id="2-保存并生效"><a href="#2-保存并生效" class="headerlink" title="2. 保存并生效"></a>2. 保存并生效</h3><ol><li><p>在 Nano 编辑器中按 <code>Ctrl + O</code>。</p></li><li><p>看到提示 <code>File Name to Write: /root/.bashrc</code> 后，直接按 <strong>回车 (Enter)</strong> 确认写入。</p></li><li><p>按 <code>Ctrl + X</code> 退出编辑器。</p></li><li><p>执行以下命令让环境变量立即生效：</p><p>Bash</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure></li></ol><hr><h2 id="💻-四、首次运行与日常使用"><a href="#💻-四、首次运行与日常使用" class="headerlink" title="💻 四、首次运行与日常使用"></a>💻 四、首次运行与日常使用</h2><p>Claude Code 作为项目级 Agent，<strong>必须在 Git 仓库目录内部运行</strong>。</p><h3 id="1-初始化测试项目"><a href="#1-初始化测试项目" class="headerlink" title="1. 初始化测试项目"></a>1. 初始化测试项目</h3><p>Bash</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 创建并进入工作目录</span><br><span class="line">mkdir -p ~/my-ai-project &amp;&amp; cd ~/my-ai-project</span><br><span class="line"></span><br><span class="line"># 初始化 Git 仓库（核心前置条件）</span><br><span class="line">git init</span><br></pre></td></tr></table></figure><h3 id="2-启动客户端"><a href="#2-启动客户端" class="headerlink" title="2. 启动客户端"></a>2. 启动客户端</h3><p>Bash</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude</span><br></pre></td></tr></table></figure><p>首次运行时，系统会展示 Onboarding 引导流程与服务条款，一路按 <strong>回车</strong> 确认即可进入交互终端。</p><h3 id="3-常用交互指令"><a href="#3-常用交互指令" class="headerlink" title="3. 常用交互指令"></a>3. 常用交互指令</h3><p>进入 <code>claude&gt;</code> 专属终端后，可直接下达自然语言指令：</p><ul><li><strong>任务下达</strong>：<code>&quot;帮我用 Python 写一个网络流量监控脚本，并保存为 monitor.py&quot;</code></li><li><strong>代码审查</strong>：<code>/review</code> <em>(审查当前仓库对比上一版本的修改)</em></li><li><strong>添加文件到上下文</strong>：<code>/add &lt;文件名&gt;</code></li><li><strong>退出测试</strong>：<code>exit</code> 或 <code>Ctrl + D</code></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具与折腾 </category>
+          
+          <category> 效率工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> claude </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>终端网络开关</title>
+      <link href="/2026/05/17/%E7%BB%88%E7%AB%AF%E7%BD%91%E7%BB%9C%E5%BC%80%E5%85%B3/"/>
+      <url>/2026/05/17/%E7%BB%88%E7%AB%AF%E7%BD%91%E7%BB%9C%E5%BC%80%E5%85%B3/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、-终端网络开关（最常用）"><a href="#一、-终端网络开关（最常用）" class="headerlink" title="一、 终端网络开关（最常用）"></a>一、 终端网络开关（最常用）</h2><p>我们在系统里配置的环境变量别名（Alias）是控制终端流量的最高效手段。</p><h3 id="🚀-开启代理"><a href="#🚀-开启代理" class="headerlink" title="🚀 开启代理"></a>🚀 开启代理</h3><p>在终端输入以下命令：</p><p>Bash</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxy</span><br></pre></td></tr></table></figure><ul><li><strong>效果</strong>：终端打印 <code>代理已开启 🚀</code>。此时 <code>curl</code>、<code>wget</code>、<code>git</code>、<code>apt</code> 等标准 Linux 命令会自动走 Mihomo 的 <code>7890</code> 端口出海。</li></ul><h3 id="🛑-关闭代理（切回直连）"><a href="#🛑-关闭代理（切回直连）" class="headerlink" title="🛑 关闭代理（切回直连）"></a>🛑 关闭代理（切回直连）</h3><p>在终端输入以下命令：</p><p>Bash</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unproxy</span><br></pre></td></tr></table></figure><ul><li><strong>效果</strong>：终端打印 <code>代理已关闭 🛑</code>。此时立刻清空终端代理环境变量，所有流量恢复国内常规直连。</li></ul><h3 id="🔍-检查当前终端状态"><a href="#🔍-检查当前终端状态" class="headerlink" title="🔍 检查当前终端状态"></a>🔍 检查当前终端状态</h3><p>如果你不确定当前窗口到底开没开代理，执行这行命令：</p><p>Bash</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $http_proxy</span><br></pre></td></tr></table></figure><ul><li><strong>判断标准</strong>：<ul><li>如果输出了 <code>http://127.0.0.1:7890</code> ➡️ 说明<strong>代理正开启着</strong>。</li><li>如果<strong>什么都没输出（白屏空行）</strong> ➡️ 说明当前是<strong>纯直连状态</strong>。</li></ul></li></ul><h2 id="二、-后台-Mihomo-服务开关"><a href="#二、-后台-Mihomo-服务开关" class="headerlink" title="二、 后台 Mihomo 服务开关"></a>二、 后台 Mihomo 服务开关</h2><p>如果你短期内完全不需要服务器挂代理，或者想要释放系统内存（约 16M 左右），可以直接控制后台内核。</p><ul><li><p><strong>彻底关闭后台代理软件</strong>：</p><p>Bash</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl stop mihomo</span><br></pre></td></tr></table></figure><p><em>(执行后，Mihomo 进程退出，系统完全释放 7890 端口)</em></p></li><li><p><strong>重新唤醒后台代理软件</strong>：</p><p>Bash</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start mihomo</span><br></pre></td></tr></table></figure></li><li><p><strong>查看软件当前死活</strong>：</p><p>Bash</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status mihomo</span><br></pre></td></tr></table></figure><p><em>(看到绿色的 <code>active (running)</code> 说明它在后台待命，看到白色的 <code>inactive (dead)</code> 说明它彻底睡着了)</em></p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具与折腾 </category>
+          
+          <category> 效率工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> 网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux 服务器 Mihomo (Clash) 部署与避坑完整记录</title>
+      <link href="/2026/05/16/linux%E6%9C%8D%E5%8A%A1%E5%99%A8Mihomo%20(Clash)%20%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%81%BF%E5%9D%91%E5%AE%8C%E6%95%B4%E8%AE%B0%E5%BD%95/"/>
+      <url>/2026/05/16/linux%E6%9C%8D%E5%8A%A1%E5%99%A8Mihomo%20(Clash)%20%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%81%BF%E5%9D%91%E5%AE%8C%E6%95%B4%E8%AE%B0%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Linux-服务器-Mihomo-Clash-部署与避坑完整记录"><a href="#Linux-服务器-Mihomo-Clash-部署与避坑完整记录" class="headerlink" title="Linux 服务器 Mihomo (Clash) 部署与避坑完整记录"></a>Linux 服务器 Mihomo (Clash) 部署与避坑完整记录</h1><h3 id="🛠️-准备工作：在-Windows-本地凑齐“召唤神龙”的-5-个文件"><a href="#🛠️-准备工作：在-Windows-本地凑齐“召唤神龙”的-5-个文件" class="headerlink" title="🛠️ 准备工作：在 Windows 本地凑齐“召唤神龙”的 5 个文件"></a>🛠️ 准备工作：在 Windows 本地凑齐“召唤神龙”的 5 个文件</h3><p>在连接服务器之前，先在你的 Windows 电脑桌面上新建一个文件夹（例如叫 <code>mihomo_files</code>），准备好以下 5 个文件：</p><ol><li><strong>核心程序 (<code>mihomo</code>)</strong>：<ul><li>下载 <code>mihomo-linux-amd64-vX.X.X.gz</code>（选 amd64 纯净版）。</li><li>解压出里面的文件，重命名为 <strong><code>mihomo</code></strong>（去掉多余的后缀）。</li></ul></li><li><strong>纯正配置文件 (<code>config.yaml</code>)</strong>：<ul><li>打开 Windows 本地的 <strong>Clash Verge</strong>，更新订阅。</li><li>右键节点卡片 -&gt; <strong>在资源管理器中显示</strong>，将弹出的 <code>.yaml</code> 文件复制出来，重命名为 <strong><code>config.yaml</code></strong>。</li><li><strong>⚠️ 避坑必须做：</strong> 用记事本打开该文件，按 <code>Ctrl + H</code>，将里面所有的非标准协议名 <strong><code>anytls</code></strong> 替换为标准协议名 <strong><code>trojan</code></strong>，然后保存关闭。</li></ul></li><li><strong>三大 Geo 数据库文件</strong>（防服务器拉取失败变成 0KB）：<ul><li>通过浏览器直接下载以下三个文件：<ul><li><a href="https://www.google.com/search?q=https://cdn.jsdelivr.net/gh/Dreamacro/maxmind-geoip@release/Country.mmdb&authuser=2">Country.mmdb</a></li><li><a href="https://www.google.com/search?q=https://cdn.jsdelivr.net/gh/v2fly/domain-list-community@release/dlc.dat&authuser=2">geosite.dat</a> <em>(下载后若名为 dlc.dat，重命名为 geosite.dat)</em></li><li><a href="https://www.google.com/search?q=https://cdn.jsdelivr.net/gh/v2fly/geoip@release/geoip.dat&authuser=2">geoip.dat</a></li></ul></li></ul></li></ol><hr><h3 id="🚀-正式部署：三步走战略"><a href="#🚀-正式部署：三步走战略" class="headerlink" title="🚀 正式部署：三步走战略"></a>🚀 正式部署：三步走战略</h3><h4 id="第一步：建立目录并赋予权限-FinalShell"><a href="#第一步：建立目录并赋予权限-FinalShell" class="headerlink" title="第一步：建立目录并赋予权限 (FinalShell)"></a>第一步：建立目录并赋予权限 (FinalShell)</h4><p>登录服务器，创建工作目录并放入内核文件：</p><p>Bash</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 1. 创建配置存放目录</span><br><span class="line">sudo mkdir -p /etc/mihomo</span><br><span class="line"></span><br><span class="line"># 2. (通过 WinSCP 把刚才准备好的 mihomo 二进制文件，拖入服务器的 /usr/local/bin/ 目录)</span><br><span class="line"></span><br><span class="line"># 3. 赋予执行权限</span><br><span class="line">sudo chmod +x /usr/local/bin/mihomo</span><br></pre></td></tr></table></figure><h4 id="第二步：上传配置文件与数据库-WinSCP"><a href="#第二步：上传配置文件与数据库-WinSCP" class="headerlink" title="第二步：上传配置文件与数据库 (WinSCP)"></a>第二步：上传配置文件与数据库 (WinSCP)</h4><p>打开 WinSCP，进入服务器的 <strong><code>/etc/mihomo/</code></strong> 目录。 将你在本地准备好的另外 4 个文件直接<strong>拖拽</strong>进去：</p><ul><li><code>config.yaml</code></li><li><code>Country.mmdb</code></li><li><code>geosite.dat</code></li><li><code>geoip.dat</code></li></ul><h4 id="第三步：配置后台常驻服务-FinalShell-WinSCP"><a href="#第三步：配置后台常驻服务-FinalShell-WinSCP" class="headerlink" title="第三步：配置后台常驻服务 (FinalShell + WinSCP)"></a>第三步：配置后台常驻服务 (FinalShell + WinSCP)</h4><ol><li>在 WinSCP 中，进入 <code>/etc/systemd/system/</code> 目录。</li><li>右键新建文件，命名为 <strong><code>mihomo.service</code></strong>。</li><li>双击打开，将以下代码粘贴进去并保存：</li></ol><p>Ini, TOML</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=Mihomo Daemon, Another Clash Kernel.</span><br><span class="line">After=network.target NetworkManager.service systemd-networkd.service iwd.service</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=simple</span><br><span class="line">LimitNPROC=500</span><br><span class="line">LimitNOFILE=1000000</span><br><span class="line">Restart=always</span><br><span class="line">ExecStartPre=/usr/bin/sleep 1s</span><br><span class="line">ExecStart=/usr/local/bin/mihomo -d /etc/mihomo</span><br><span class="line">ExecReload=/bin/kill -HUP $MAINPID</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure><ol><li>回到 FinalShell，执行启动三连命令：</li></ol><p>Bash</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl enable mihomo</span><br><span class="line">sudo systemctl start mihomo</span><br><span class="line">systemctl status mihomo   # 看到绿色的 active (running) 即代表成功</span><br></pre></td></tr></table></figure><hr><h3 id="🎮-终极利器：配置终端快捷开关"><a href="#🎮-终极利器：配置终端快捷开关" class="headerlink" title="🎮 终极利器：配置终端快捷开关"></a>🎮 终极利器：配置终端快捷开关</h3><p>为了不用每次都敲一长串代理环境变量，将开关写进环境变量文件中：</p><ol><li>在 FinalShell 终端执行一次以下代码（直接全部复制粘贴并回车）：</li></ol><p>Bash</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;alias proxy=&quot;export http_proxy=http://127.0.0.1:7890; export https_proxy=http://127.0.0.1:7890; echo -e \&quot;\n代理已开启 🚀\&quot;&quot;&#x27; &gt;&gt; ~/.bashrc</span><br><span class="line">echo &#x27;alias unproxy=&quot;unset http_proxy https_proxy; echo -e \&quot;\n代理已关闭 🛑\&quot;&quot;&#x27; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure><ol><li><strong>日常使用方法</strong>：<ul><li>登录服务器后，敲入 <strong><code>proxy</code></strong> 回车，终端即可连通外网（可执行 <code>curl -I https://google.com</code> 测试）。</li><li>敲入 <strong><code>unproxy</code></strong> 回车，关闭代理恢复直连。</li></ul></li></ol><hr><h3 id="📅-每月例行维护指南"><a href="#📅-每月例行维护指南" class="headerlink" title="📅 每月例行维护指南"></a>📅 每月例行维护指南</h3><p>每月节点更新时，只需 <strong>2 分钟</strong>：</p><ol><li>本地 Clash Verge 更新订阅，提取 <code>.yaml</code> 文件并重命名为 <code>config.yaml</code>。</li><li>将文件里的 <code>anytls</code> 替换为 <code>trojan</code>。</li><li>用 WinSCP 将该文件拖入服务器 <code>/etc/mihomo/</code> 覆盖旧文件。</li><li>FinalShell 执行 <code>sudo systemctl restart mihomo</code>。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具与折腾 </category>
+          
+          <category> 效率工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> 服务器 </tag>
+            
+            <tag> 网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Mihomo 服务器节点每月更新操作指南</title>
+      <link href="/2026/05/16/Mihomo%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%8A%82%E7%82%B9%E6%AF%8F%E6%9C%88%E6%9B%B4%E6%96%B0%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/"/>
+      <url>/2026/05/16/Mihomo%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%8A%82%E7%82%B9%E6%AF%8F%E6%9C%88%E6%9B%B4%E6%96%B0%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Mihomo-服务器节点每月更新操作指南"><a href="#Mihomo-服务器节点每月更新操作指南" class="headerlink" title="Mihomo 服务器节点每月更新操作指南"></a>Mihomo 服务器节点每月更新操作指南</h1><h4 id="第一步：在-Windows-本地获取最新配置"><a href="#第一步：在-Windows-本地获取最新配置" class="headerlink" title="第一步：在 Windows 本地获取最新配置"></a>第一步：在 Windows 本地获取最新配置</h4><ol><li>打开电脑上的 <strong>Clash Verge</strong> 软件。</li><li>进入左侧的 <strong>“订阅”</strong> 页面。</li><li>找到你的“极速云”卡片，点击右上角的 <strong>“刷新&#x2F;更新”</strong> 图标，等待更新完成。</li></ol><h4 id="第二步：提取并“净化”配置文件（⭐-最关键一步）"><a href="#第二步：提取并“净化”配置文件（⭐-最关键一步）" class="headerlink" title="第二步：提取并“净化”配置文件（⭐ 最关键一步）"></a>第二步：提取并“净化”配置文件（⭐ 最关键一步）</h4><ol><li>右键点击更新好的“极速云”卡片，选择 <strong>“在资源管理器中显示”</strong>。</li><li>将弹出的文件夹里那个高亮的 <code>.yaml</code> 文件，<strong>复制一份到你的电脑桌面上</strong>。</li><li>在桌面上把这个文件重命名为 <strong><code>config.yaml</code></strong>。</li><li>右键该文件，选择“用记事本打开”（或使用其他文本编辑器）。</li><li>按下 <strong><code>Ctrl + H</code></strong> 调出查找替换功能：<ul><li>查找内容填入：<code>anytls</code></li><li>替换为填入：<code>trojan</code></li></ul></li><li>点击 <strong>“全部替换”</strong>，然后按下 <code>Ctrl + S</code> 保存并关闭文件。</li></ol><h4 id="第三步：使用-WinSCP-替换服务器文件"><a href="#第三步：使用-WinSCP-替换服务器文件" class="headerlink" title="第三步：使用 WinSCP 替换服务器文件"></a>第三步：使用 WinSCP 替换服务器文件</h4><ol><li>打开 <strong>WinSCP</strong> 并连接到你的 Linux 服务器。</li><li>在右侧（服务器端）进入目录：<strong><code>/etc/mihomo/</code></strong>。</li><li>把桌面上刚才修改好的 <strong><code>config.yaml</code></strong>，直接<strong>拖拽</strong>到右侧窗口。</li><li>遇到提示时，选择 <strong>“是&#x2F;覆盖”</strong> 旧文件。</li></ol><h4 id="第四步：在终端重启服务使之生效"><a href="#第四步：在终端重启服务使之生效" class="headerlink" title="第四步：在终端重启服务使之生效"></a>第四步：在终端重启服务使之生效</h4><ol><li><p>打开 <strong>FinalShell</strong> 连接到服务器终端。</p></li><li><p>复制并执行以下命令重启代理内核：</p><p>Bash</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart mihomo</span><br></pre></td></tr></table></figure></li><li><p>（可选检查）执行以下命令确认服务亮起绿色的 <code>active (running)</code>：</p><p>Bash</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status mihomo</span><br></pre></td></tr></table></figure></li></ol><p>🎉 <strong>至此，每月的节点更新已彻底完成！</strong> 只要你在终端里配置了之前说的快捷开关，直接输入 <code>proxy</code> 就可以继续畅游外网了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具与折腾 </category>
+          
+          <category> 效率工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> 服务器 </tag>
+            
+            <tag> 网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数组与向量</title>
       <link href="/2026/05/14/%E6%95%B0%E7%BB%84%E4%B8%8E%E5%90%91%E9%87%8F/"/>
       <url>/2026/05/14/%E6%95%B0%E7%BB%84%E4%B8%8E%E5%90%91%E9%87%8F/</url>
@@ -200,11 +320,11 @@
       
         <tags>
             
+            <tag> linux </tag>
+            
             <tag> nginx </tag>
             
             <tag> ssl </tag>
-            
-            <tag> linux </tag>
             
         </tags>
       
@@ -316,11 +436,11 @@
       
         <tags>
             
+            <tag> 网络 </tag>
+            
             <tag> SDN </tag>
             
             <tag> 数据中心 </tag>
-            
-            <tag> 网络 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -573,7 +693,9 @@
       
         <tags>
             
-            <tag> C++,STL </tag>
+            <tag> C++ </tag>
+            
+            <tag> STL </tag>
             
             <tag> C++模板编程 </tag>
             
@@ -1315,6 +1437,14 @@
       
         <content type="html"><![CDATA[<h1 id="编译链接原理"><a href="#编译链接原理" class="headerlink" title="编译链接原理"></a>编译链接原理</h1><h2 id="1-预编译"><a href="#1-预编译" class="headerlink" title="1.预编译"></a>1.预编译</h2><p>开头的命令</p><p>注意以下代码&#x3D;&#x3D;不是&#x3D;&#x3D;预编译</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> lib             <span class="comment">//链接库 链接阶段，为链接器提供东西</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> link<span class="comment">//main为一般入口函数， 改变入口函数</span></span></span><br></pre></td></tr></table></figure><hr><h2 id="2-编译"><a href="#2-编译" class="headerlink" title="2.编译"></a>2.编译</h2><p><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20241229154454330.png" alt="image-20241229154454330"></p><h2 id="3-汇编"><a href="#3-汇编" class="headerlink" title="3.汇编"></a>3.汇编</h2><p> x86 ATA  生成.o</p><hr><h2 id="4-链接："><a href="#4-链接：" class="headerlink" title="4.链接："></a>4.链接：</h2><p><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20241229155506604.png" alt="image-20241229155506604"></p><p>符号解析</p><p>符号的重定位 <em>核心</em></p><p><font color=red><strong>链接主要是将.o文件重定位</strong></font></p><p>查看.o文件详细信息，.o可重定位，不可执行</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">objdump   -t main.o</span><br></pre></td></tr></table></figure><p>查看.o文件符号</p><p><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20241229161345141.png" alt="image-20241229161345141"></p><p>以上代码，gdata sum为引用，但是二者都在.o文件中产生了符号</p><p><img src="/C.assets/image-20241229161551400.png" alt="image-20241229161551400"></p><ol><li>main –text 在代码段</li></ol><p>​ data  –data 在数据段</p><p>​         <u> gdata、sum– &#x3D;&#x3D;UND&#x3D;&#x3D;  引用</u></p><ol start="2"><li><p>第二列 l：loca l；g：global</p><pre><code>    链接时链接器只能看见g，静态变量是l，</code></pre></li></ol><hr><p><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20241229162259209.png" alt="image-20241229162259209"></p><p>sum 和形参一起生成符号</p><hr><p>.o文件组成：</p><p>elf文件头   每个段一个文件头</p><p>text</p><p>data</p><p>bss</p><p>symbal</p><p>section table</p><p>编译过程中符号不分配地址</p><p><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20241229162957864.png" alt="image-20241229162957864"></p><p>注意到 data、gdata 地址都为0</p><hr><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>各个段进行合并  .text&lt;&#x3D;&gt;.text</p><p>对符号的引用（UND） 换成定义 （在其他段寻找) ，且只允许找到一个定义（符号重定义)</p><p>符号解析成功后，给所有符号&#x3D;&#x3D;分配虚拟地址&#x3D;&#x3D;。  符号的重定向</p><p>链接完，成exe&#x2F;out 可重定向&#x3D;》可执行</p><hr><h3 id="可执行文件"><a href="#可执行文件" class="headerlink" title="可执行文件"></a>可执行文件</h3><p>有program headers </p><p>内容：两个load，把代码段、数据段 加载到内存，其他不用加载到内存</p><p><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20241229165246968.png" alt="image-20241229165246968"></p><p>我408也没白学哈哈哈呜呜</p><hr><hr><h1 id="指令角度掌握函数调用过程"><a href="#指令角度掌握函数调用过程" class="headerlink" title="指令角度掌握函数调用过程"></a>指令角度掌握函数调用过程</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;pch.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">sum</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//push ebp 保存此时栈底(main)</span></span><br><span class="line">    <span class="comment">//mov ebp,esp  </span></span><br><span class="line">    <span class="comment">//sub esp,4CH 为sum开辟空间 </span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="type">int</span> temp = <span class="number">0</span>;   <span class="comment">//mov dword ptr[ebp-4],0</span></span><br><span class="line">temp = a + b;<span class="comment">//mov eax,dword ptr[ebp+0CH]</span></span><br><span class="line">    <span class="comment">//add eax,dword ptr[ebp+8]  a+b</span></span><br><span class="line">    <span class="comment">//mov dword ptr[ebp-4],eax</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">return</span> temp;<span class="comment">//mov eax,dword ptr[ebp-4]</span></span><br><span class="line">&#125;<span class="comment">//mov esp,ebp;  回退栈帧，但数据并没有清理</span></span><br><span class="line"><span class="comment">//pop ebp  找回main 的栈底</span></span><br><span class="line"><span class="comment">//ret:出栈 （下一条指令地址给pc）</span></span><br><span class="line"><span class="comment">//回到main下一条指令</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> a = <span class="number">10</span>;<span class="comment">//mov dword ptr[ebp-4], 0Ah</span></span><br><span class="line"><span class="type">int</span> b = <span class="number">20</span>;<span class="comment">//mov dword ptr[ebp-8], 14h</span></span><br><span class="line"><span class="type">int</span> ret=<span class="built_in">sum</span>(a, b); <span class="comment">//main调用sum完，如何回来？</span></span><br><span class="line">    <span class="comment">//1.压栈 b 从右边开始  mov eax,dowrd ptr[ebp-4]</span></span><br><span class="line">    <span class="comment">//                   push eax</span></span><br><span class="line">    <span class="comment">//                   mov eax,dowrd ptr[ebp-8]</span></span><br><span class="line"><span class="comment">//                   push eax</span></span><br><span class="line">    <span class="comment">//                   call sum  :去执行sum了</span></span><br><span class="line">    <span class="comment">//0x08124458 add esp,8   下一条指令，esp+8.释放ab两个形参</span></span><br><span class="line">    <span class="comment">// mov dword ptr[ebp-0ch],eax    eax=30</span></span><br><span class="line">    <span class="comment">//eax--&lt;=4 ;eax+edx---&lt;=8;&gt;8产生临时量带出返回值</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">cout &lt;&lt; <span class="string">&quot;ret:&quot;</span> &lt;&lt; ret &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="main调用sum后，如何回来？"><a href="#main调用sum后，如何回来？" class="headerlink" title="main调用sum后，如何回来？"></a>main调用sum后，如何回来？</h3><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20241229174349632.png" alt="image-20241229174349632" style="zoom:50%;" /><img src="https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20241229174314915.png" alt="image-20241229174314915" style="zoom:50%;" /> ]]></content>
       
+      
+      <categories>
+          
+          <category> 编程语言与算法 </category>
+          
+          <category> C/C++ </category>
+          
+      </categories>
       
       
         <tags>

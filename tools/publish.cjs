@@ -40,7 +40,7 @@ run('git', ['add', '.']);
 
 const diffResult = run('git', ['diff', '--cached', '--quiet'], { capture: true });
 if (diffResult.status === 1) {
-  run('git', ['commit', '-m', 'update blog']);
+  run('git', ['commit', '-m', 'update-blog']);
 } else if (diffResult.status !== 0) {
   console.error(diffResult.stderr.trim());
   process.exit(diffResult.status || 1);

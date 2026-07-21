@@ -1,0 +1,315 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+
+  "frontMatter.framework.id": "hexo",
+
+  "frontMatter.preview.host": "http://localhost:4000",
+
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "已发布文章",
+      "path": "[[workspace]]/source/_posts",
+      "contentTypes": [
+        "default",
+        "技术教程",
+        "折腾记录",
+        "项目部署",
+        "思想随笔"
+      ],
+      "excludePaths": [
+        ".history",
+        ".vscode"
+      ]
+    },
+    {
+      "title": "草稿",
+      "path": "[[workspace]]/source/_drafts",
+      "contentTypes": [
+        "default",
+        "技术教程",
+        "折腾记录",
+        "项目部署",
+        "思想随笔"
+      ],
+      "excludePaths": [
+        ".history",
+        ".vscode"
+      ]
+    }
+  ],
+
+  "frontMatter.taxonomy.dateFormat": "yyyy-MM-dd HH:mm:ss",
+
+  "frontMatter.taxonomy.contentTypes": [
+
+    {
+      "name": "default",
+      "description": "通用文章类型，适合普通记录和临时文章",
+
+      "pageBundle": false,
+      "fileType": "md",
+
+      "template": "[[workspace]]/.frontmatter/templates/post.md",
+
+      "fields": [
+        {
+          "title": "标题",
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "title": "发布日期",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "更新时间",
+          "name": "updated",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isModifiedDate": true
+        },
+        {
+          "title": "分类",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "标签",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "摘要",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "封面",
+          "name": "cover",
+          "type": "string"
+        }
+      ]
+    },
+
+
+    {
+      "name": "技术教程",
+      "description": "用于记录教程、解决方案和操作步骤",
+
+      "pageBundle": false,
+      "fileType": "md",
+
+      "template": "[[workspace]]/.frontmatter/templates/tutorial.md",
+
+      "fields": [
+        {
+          "title": "标题",
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "title": "发布日期",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "更新时间",
+          "name": "updated",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isModifiedDate": true
+        },
+        {
+          "title": "分类",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "标签",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "摘要",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "封面",
+          "name": "cover",
+          "type": "string"
+        }
+      ]
+    },
+
+
+    {
+      "name": "折腾记录",
+      "description": "用于记录实验过程、踩坑过程和问题解决",
+
+      "pageBundle": false,
+      "fileType": "md",
+
+      "template": "[[workspace]]/.frontmatter/templates/record.md",
+
+      "fields": [
+        {
+          "title": "标题",
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "title": "发布日期",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "更新时间",
+          "name": "updated",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isModifiedDate": true
+        },
+        {
+          "title": "分类",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "标签",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "摘要",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "封面",
+          "name": "cover",
+          "type": "string"
+        }
+      ]
+    },
+
+
+    {
+      "name": "项目部署",
+      "description": "用于记录完整项目部署流程",
+
+      "pageBundle": false,
+      "fileType": "md",
+
+      "template": "[[workspace]]/.frontmatter/templates/deployment.md",
+
+      "fields": [
+        {
+          "title": "标题",
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "title": "发布日期",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "更新时间",
+          "name": "updated",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isModifiedDate": true
+        },
+        {
+          "title": "分类",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "标签",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "摘要",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "封面",
+          "name": "cover",
+          "type": "string"
+        }
+      ]
+    },
+
+
+    {
+      "name": "思想随笔",
+      "description": "用于记录学习感悟、个人思考和技术理解",
+
+      "pageBundle": false,
+      "fileType": "md",
+
+      "template": "[[workspace]]/.frontmatter/templates/思想随笔.md",
+
+      "fields": [
+        {
+          "title": "标题",
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "title": "发布日期",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "更新时间",
+          "name": "updated",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isModifiedDate": true
+        },
+        {
+          "title": "分类",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "标签",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "摘要",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "封面",
+          "name": "cover",
+          "type": "string"
+        }
+      ]
+    }
+
+  ]
+}

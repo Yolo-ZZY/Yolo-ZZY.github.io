@@ -4,10 +4,10 @@ date: 2024-12-29 15:40:47
 updated: 2024-12-29 15:40:47
 categories:
   - ["编程语言与算法", "C/C++"]
+description: 
 tags:
   - "C++"
   - "C++基础"
-description: "查看.o文件详细信息，.o可重定位，不可执行"
 cover: ""
 ---
 

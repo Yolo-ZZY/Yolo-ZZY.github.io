@@ -1,11 +1,11 @@
 ---
-title: {{ title }}
-date: {{ date }}
-updated: {{ date }}
-categories:
-tags:
-description:
-cover:
+title: "{{title}}"
+date: "{{now}}"
+updated: "{{now}}"
+categories: []
+tags: []
+description: ""
+cover: ""
 ---
 
 # 前言

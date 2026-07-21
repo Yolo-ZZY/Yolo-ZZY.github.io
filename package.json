@@ -3,9 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "new": "hexo new draft",
+    "dev": "hexo server --draft",
     "build": "hexo generate",
+    "check": "node tools/validate-posts.cjs",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
+    "publish": "node tools/publish.cjs",
     "server": "hexo server"
   },
   "hexo": {

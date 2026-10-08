@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>git基础操作</title>
+      <link href="/2026/10/08/git%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/"/>
+      <url>/2026/10/08/git%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</url>
+      
+        <content type="html"><![CDATA[<h1 id="git基础操作"><a href="#git基础操作" class="headerlink" title="git基础操作"></a>git基础操作</h1><h2 id="1-查看状态：git-status"><a href="#1-查看状态：git-status" class="headerlink" title="1. 查看状态：git status"></a>1. 查看状态：git status</h2><p><code>git status</code> 用来查看当前仓库的状态：哪些文件被修改过、哪些改动已经暂存（等待提交）、哪些文件还没有被 Git 跟踪。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure><blockquote><p><strong>注意</strong>：提交前建议先 <code>git status</code> 确认一遍，避免漏掉文件或多提交不该提交的内容。</p></blockquote><h2 id="2-查看具体改动：git-diff-与-git-diff-–staged"><a href="#2-查看具体改动：git-diff-与-git-diff-–staged" class="headerlink" title="2. 查看具体改动：git diff 与 git diff –staged"></a>2. 查看具体改动：git diff 与 git diff –staged</h2><p><code>git status</code> 只能看到哪些文件变了，想看具体改了什么内容，用 <code>git diff</code>：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git diff            <span class="comment"># 查看工作区中还没暂存的改动</span></span><br><span class="line">git diff --staged   <span class="comment"># 查看已经 git add 暂存、等待提交的改动</span></span><br></pre></td></tr></table></figure><ul><li>还没有 <code>git add</code> 的改动 → 用 <code>git diff</code> 看。</li><li>已经 <code>git add</code> 过的改动不在 <code>git diff</code> 里显示，要用 <code>git diff --staged</code> 看。</li></ul><h2 id="3-暂存改动：git-add"><a href="#3-暂存改动：git-add" class="headerlink" title="3. 暂存改动：git add"></a>3. 暂存改动：git add</h2><p>提交之前，需要先把想提交的改动放进暂存区（staging area）。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add 文件名   <span class="comment"># 暂存指定文件，例如 git add a</span></span><br><span class="line">git add .        <span class="comment"># 暂存当前目录下的所有改动（新增、修改、删除）</span></span><br><span class="line">git add -A       <span class="comment"># 暂存整个仓库的所有改动，包括新增、修改、删除的文件</span></span><br></pre></td></tr></table></figure><blockquote><p><strong>注意</strong>：在仓库根目录下执行时，<code>git add .</code> 和 <code>git add -A</code> 效果基本一致；区别在于作用范围，<code>.</code> 只作用于当前所在目录，<code>-A</code> 始终覆盖整个仓库。</p></blockquote><h2 id="4-提交：git-commit"><a href="#4-提交：git-commit" class="headerlink" title="4. 提交：git commit"></a>4. 提交：git commit</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git commit            <span class="comment"># 提交，会打开编辑器（默认 vim）写提交信息</span></span><br><span class="line">git commit -m <span class="string">&quot;说明&quot;</span>  <span class="comment"># 直接跟一行提交信息，不打开编辑器</span></span><br></pre></td></tr></table></figure><p>直接敲 <code>git commit</code> 会进入 vim 编写提交说明，vim 下的基本操作：</p><ul><li><code>i</code>：进入插入模式，开始输入文字</li><li><code>Esc</code>：退出插入模式，回到普通模式</li><li><code>:wq</code>：保存并退出（<code>:w</code> 保存，<code>:q</code> 退出）</li><li><code>:q!</code>：不保存强制退出，写错了想放弃时用</li></ul><blockquote><p><strong>注意</strong>：提交信息要写清楚这次改了什么，方便以后 <code>git log</code> 时回看。</p></blockquote><h2 id="5-查看提交历史：git-log-–oneline"><a href="#5-查看提交历史：git-log-–oneline" class="headerlink" title="5. 查看提交历史：git log –oneline"></a>5. 查看提交历史：git log –oneline</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> --oneline</span><br></pre></td></tr></table></figure><p>每条提交只显示一行：前面是 commit 的短哈希值，后面是提交信息，一目了然。</p><h2 id="6-切换分支：git-switch"><a href="#6-切换分支：git-switch" class="headerlink" title="6. 切换分支：git switch"></a>6. 切换分支：git switch</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git switch main                 <span class="comment"># 切回 main 分支</span></span><br><span class="line">git switch --detach             <span class="comment"># 以当前提交为基准进入分离头指针（detached HEAD）状态</span></span><br><span class="line">git switch --detach &lt;提交哈希&gt;  <span class="comment"># 切换到某个历史提交，查看当时的状态</span></span><br></pre></td></tr></table></figure><p><code>--detach</code> 进入的是「分离头指针」状态：此时 HEAD 不指向任何分支。在这个状态下查看历史、运行代码都没问题，但如果在这里产生了新的提交，切回分支后这些提交可能就「找不到」了。</p><blockquote><p><strong>注意</strong>：查看完历史提交后，用 <code>git switch main</code> 切回主分支即可恢复正常工作。</p></blockquote><h2 id="7-一次完整流程"><a href="#7-一次完整流程" class="headerlink" title="7. 一次完整流程"></a>7. 一次完整流程</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git status              <span class="comment"># 1. 看有哪些改动</span></span><br><span class="line">git diff                <span class="comment"># 2. 看具体改了什么</span></span><br><span class="line">git add .               <span class="comment"># 3. 把改动暂存起来</span></span><br><span class="line">git diff --staged       <span class="comment"># 4. 确认暂存的内容</span></span><br><span class="line">git commit -m <span class="string">&quot;说明&quot;</span>    <span class="comment"># 5. 提交</span></span><br><span class="line">git <span class="built_in">log</span> --oneline       <span class="comment"># 6. 查看提交历史</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具与折腾 </category>
+          
+          <category> 工具笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+            <tag> 版本控制 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>博客自动化工作流测试</title>
       <link href="/2026/07/21/2026-07-21-%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%B5%8B%E8%AF%95/"/>
       <url>/2026/07/21/2026-07-21-%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%B5%8B%E8%AF%95/</url>
@@ -11,6 +40,24 @@
         <content type="html"><![CDATA[<h2 id="思考背景"><a href="#思考背景" class="headerlink" title="思考背景"></a>思考背景</h2><h2 id="我的理解"><a href="#我的理解" class="headerlink" title="我的理解"></a>我的理解</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>]]></content>
       
       
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 博客 </category>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 自动化 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -26,18 +73,24 @@
       
       <categories>
           
-          <category> 工具与折腾 </category>
+          <category> 技术 </category>
           
-          <category> 效率工具 </category>
+          <category> AI </category>
+          
+          <category> AI工具 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> linux </tag>
+            <tag> Claude Code </tag>
             
-            <tag> claude </tag>
+            <tag> Ubuntu </tag>
+            
+            <tag> DeepSeek </tag>
+            
+            <tag> AI 编程 </tag>
             
         </tags>
       
@@ -55,16 +108,18 @@
       
       <categories>
           
-          <category> 工具与折腾 </category>
+          <category> 技术 </category>
           
-          <category> 效率工具 </category>
+          <category> Linux </category>
+          
+          <category> 服务器 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> linux </tag>
+            <tag> Linux </tag>
             
             <tag> 网络 </tag>
             
@@ -84,16 +139,18 @@
       
       <categories>
           
-          <category> 工具与折腾 </category>
+          <category> 技术 </category>
           
-          <category> 效率工具 </category>
+          <category> Linux </category>
+          
+          <category> 服务器 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> linux </tag>
+            <tag> Linux </tag>
             
             <tag> 服务器 </tag>
             
@@ -115,16 +172,18 @@
       
       <categories>
           
-          <category> 工具与折腾 </category>
+          <category> 技术 </category>
           
-          <category> 效率工具 </category>
+          <category> Linux </category>
+          
+          <category> 服务器 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> linux </tag>
+            <tag> Linux </tag>
             
             <tag> 服务器 </tag>
             
@@ -146,9 +205,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -177,9 +238,7 @@
       
       <categories>
           
-          <category> 生活与随想 </category>
-          
-          <category> 日常随笔 </category>
+          <category> 随笔 </category>
           
       </categories>
       
@@ -206,18 +265,20 @@
       
       <categories>
           
-          <category> 工具与折腾 </category>
+          <category> 技术 </category>
           
-          <category> 效率工具 </category>
+          <category> AI </category>
+          
+          <category> AI工具 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> claude </tag>
+            <tag> Claude Code </tag>
             
-            <tag> ccswitch </tag>
+            <tag> CCSwitch </tag>
             
         </tags>
       
@@ -235,9 +296,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -262,9 +325,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -291,9 +356,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -324,20 +391,22 @@
       
       <categories>
           
-          <category> 项目与实践 </category>
+          <category> 技术 </category>
           
-          <category> 博客搭建 </category>
+          <category> 博客 </category>
+          
+          <category> 部署运维 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> linux </tag>
+            <tag> Linux </tag>
             
-            <tag> nginx </tag>
+            <tag> Nginx </tag>
             
-            <tag> ssl </tag>
+            <tag> SSL </tag>
             
         </tags>
       
@@ -357,14 +426,14 @@
           
           <category> 工具与折腾 </category>
           
-          <category> 效率工具 </category>
+          <category> 工具笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> markdown </tag>
+            <tag> Markdown </tag>
             
         </tags>
       
@@ -384,7 +453,7 @@
           
           <category> 工具与折腾 </category>
           
-          <category> 效率工具 </category>
+          <category> 工具笔记 </category>
           
       </categories>
       
@@ -393,7 +462,7 @@
             
             <tag> git </tag>
             
-            <tag> gitbash </tag>
+            <tag> Git Bash </tag>
             
         </tags>
       
@@ -413,7 +482,7 @@
           
           <category> 工具与折腾 </category>
           
-          <category> 数码玩机 </category>
+          <category> 数码设备 </category>
           
       </categories>
       
@@ -440,9 +509,9 @@
       
       <categories>
           
-          <category> 项目与实践 </category>
+          <category> 学习与成长 </category>
           
-          <category> 实习与开发环境 </category>
+          <category> 本科毕设 </category>
           
       </categories>
       
@@ -475,9 +544,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -504,9 +575,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -531,9 +604,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -560,16 +635,20 @@
       
       <categories>
           
-          <category> 求职与面试 </category>
+          <category> 学习与成长 </category>
           
-          <category> 南航面试复习 </category>
+          <category> 面试复习 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> mysql </tag>
+            <tag> 算法 </tag>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> 面试 </tag>
             
         </tags>
       
@@ -587,16 +666,16 @@
       
       <categories>
           
-          <category> 求职与面试 </category>
+          <category> 学习与成长 </category>
           
-          <category> 南航面试复习 </category>
+          <category> 面试复习 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> mysql </tag>
+            <tag> MySQL </tag>
             
         </tags>
       
@@ -616,7 +695,7 @@
           
           <category> 工具与折腾 </category>
           
-          <category> 效率工具 </category>
+          <category> 工具笔记 </category>
           
       </categories>
       
@@ -641,9 +720,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -670,7 +751,9 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
+          
+          <category> 开发 </category>
           
           <category> 数据结构与算法 </category>
           
@@ -697,9 +780,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -728,9 +813,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -755,7 +842,9 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
+          
+          <category> 开发 </category>
           
           <category> 数据结构与算法 </category>
           
@@ -784,9 +873,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -811,9 +902,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -840,9 +933,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -869,9 +964,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -900,18 +997,20 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> C++类和对象 </tag>
+            <tag> C++ </tag>
             
-            <tag> c++ </tag>
+            <tag> C++类和对象 </tag>
             
             <tag> 构造函数 </tag>
             
@@ -931,9 +1030,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -960,9 +1061,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -991,9 +1094,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -1020,18 +1125,24 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> 环境配置 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> c </tag>
+            <tag> VS Code </tag>
             
-            <tag> vscode </tag>
+            <tag> C </tag>
+            
+            <tag> MinGW </tag>
+            
+            <tag> 开发环境 </tag>
             
         </tags>
       
@@ -1049,9 +1160,9 @@
       
       <categories>
           
-          <category> 项目与实践 </category>
+          <category> 学习与成长 </category>
           
-          <category> 实习与开发环境 </category>
+          <category> 实习项目 </category>
           
       </categories>
       
@@ -1076,9 +1187,9 @@
       
       <categories>
           
-          <category> 项目与实践 </category>
+          <category> 学习与成长 </category>
           
-          <category> 实习与开发环境 </category>
+          <category> 实习项目 </category>
           
       </categories>
       
@@ -1105,9 +1216,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -1138,8 +1251,6 @@
       
       <categories>
           
-          <category> 生活与随想 </category>
-          
           <category> 游戏 </category>
           
       </categories>
@@ -1147,9 +1258,9 @@
       
         <tags>
             
-            <tag> rlcraft </tag>
+            <tag> RLCraft </tag>
             
-            <tag> mc </tag>
+            <tag> Minecraft </tag>
             
         </tags>
       
@@ -1167,16 +1278,18 @@
       
       <categories>
           
-          <category> 项目与实践 </category>
+          <category> 技术 </category>
           
-          <category> 博客搭建 </category>
+          <category> 博客 </category>
+          
+          <category> Hexo </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> hexo </tag>
+            <tag> Hexo </tag>
             
         </tags>
       
@@ -1194,9 +1307,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -1223,9 +1338,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -1252,9 +1369,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -1279,18 +1398,20 @@
       
       <categories>
           
-          <category> 项目与实践 </category>
+          <category> 技术 </category>
           
-          <category> 博客搭建 </category>
+          <category> 博客 </category>
+          
+          <category> Hexo </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> hexo </tag>
+            <tag> Hexo </tag>
             
-            <tag> butterfly </tag>
+            <tag> Butterfly </tag>
             
         </tags>
       
@@ -1308,9 +1429,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -1341,9 +1464,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -1370,9 +1495,7 @@
       
       <categories>
           
-          <category> 生活与随想 </category>
-          
-          <category> 日常随笔 </category>
+          <category> 随笔 </category>
           
       </categories>
       
@@ -1397,16 +1520,18 @@
       
       <categories>
           
-          <category> 项目与实践 </category>
+          <category> 技术 </category>
           
-          <category> 博客搭建 </category>
+          <category> 博客 </category>
+          
+          <category> 部署运维 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> linux </tag>
+            <tag> Linux </tag>
             
             <tag> 服务器 </tag>
             
@@ -1426,16 +1551,18 @@
       
       <categories>
           
-          <category> 项目与实践 </category>
+          <category> 技术 </category>
           
-          <category> 博客搭建 </category>
+          <category> 博客 </category>
+          
+          <category> Hexo </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> hexo </tag>
+            <tag> Hexo </tag>
             
         </tags>
       
@@ -1453,9 +1580,11 @@
       
       <categories>
           
-          <category> 编程语言与算法 </category>
+          <category> 技术 </category>
           
-          <category> C/C++ </category>
+          <category> 开发 </category>
+          
+          <category> C++ </category>
           
       </categories>
       
@@ -1482,20 +1611,22 @@
       
       <categories>
           
-          <category> 项目与实践 </category>
+          <category> 技术 </category>
           
-          <category> 博客搭建 </category>
+          <category> 博客 </category>
+          
+          <category> Hexo </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> hexo </tag>
+            <tag> Hexo </tag>
             
-            <tag> butterfly </tag>
+            <tag> Butterfly </tag>
             
-            <tag> Github </tag>
+            <tag> GitHub </tag>
             
         </tags>
       
@@ -1513,18 +1644,20 @@
       
       <categories>
           
-          <category> 项目与实践 </category>
+          <category> 技术 </category>
           
-          <category> 博客搭建 </category>
+          <category> 博客 </category>
+          
+          <category> Hexo </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> hexo </tag>
+            <tag> Hexo </tag>
             
-            <tag> butterfly </tag>
+            <tag> Butterfly </tag>
             
         </tags>
       

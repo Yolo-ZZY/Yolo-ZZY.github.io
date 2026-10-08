@@ -1,15 +1,16 @@
 ---
-title: "安装SDN网络数据中心环境"
+title: 安装SDN网络数据中心环境
 date: 2025-03-28 17:13:49
 updated: 2025-03-28 17:13:49
 categories:
-  - ["项目与实践", "实习与开发环境"]
+  - 学习与成长
+  - 本科毕设
 tags:
-  - "SDN"
-  - "数据中心"
-  - "网络"
-  - "深度学习"
-  - "毕设"
+  - SDN
+  - 数据中心
+  - 网络
+  - 深度学习
+  - 毕设
 description: "增加github域名 /etc/hosts"
 cover: ""
 ---
@@ -134,4 +135,3 @@ loadedTopology = json.load(f)
 ```
 
 .mn文件中把startcli 改为1
-

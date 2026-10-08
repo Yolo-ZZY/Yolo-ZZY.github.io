@@ -3,13 +3,13 @@ title: "ERPNEXT环境搭建（二）"
 date: 2025-02-18 11:16:08
 updated: 2025-02-18 11:16:08
 categories:
-  - ["项目与实践", "实习与开发环境"]
+  - 学习与成长
+  - 实习项目
 tags:
-  - "ERPNEXT"
+  - ERPNEXT
 description: "还好，只是重启一下虚拟机ssh，改一下主机config文件"
 cover: ""
 ---
-
 # 装bench的若干包
 ```
 bench get-app --branch version-15 erpnext https://gitee.com/ashedie/frappe

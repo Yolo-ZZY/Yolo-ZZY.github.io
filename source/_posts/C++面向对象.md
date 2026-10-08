@@ -1,16 +1,17 @@
 ---
-title: "C++面向对象"
+title: C++面向对象
 date: 2025-02-21 14:32:53
 updated: 2025-02-21 14:32:53
 categories:
-  - ["编程语言与算法", "C/C++"]
+  - 技术
+  - 开发
+  - C++
 tags:
-  - "C++"
-  - "C++类和对象"
+  - C++
+  - C++类和对象
 description: "oop即面向对象 用类代替实体的抽象类型 实体（属性、行为） -> ADT(Abstract Data Type)抽象的数据类型 对象 成员变量，行为->成员方法）"
 cover: ""
 ---
-
 # C++面向对象
 oop即面向对象
 用类代替实体的抽象类型
@@ -120,4 +121,3 @@ int main()
 ![20250221152832](https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/20250221152832.png)
 
 name后面写着补齐4B，原来只有20B，但必须是double 8B的倍数
-

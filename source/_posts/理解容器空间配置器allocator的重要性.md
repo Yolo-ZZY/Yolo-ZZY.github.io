@@ -1,16 +1,17 @@
 ---
-title: "理解容器空间配置器allocator的重要性"
+title: 理解容器空间配置器allocator的重要性
 date: 2025-03-09 19:22:32
 updated: 2025-03-09 19:22:32
 categories:
-  - ["编程语言与算法", "C/C++"]
+  - 技术
+  - 开发
+  - C++
 tags:
-  - "allocator"
-  - "C++模板编程"
+  - allocator
+  - C++模板编程
 description: "优化： 1. 构造：把内存开辟与对象构造分开处理 2. 析构：析构有效元素，然后释放first指针"
 cover: ""
 ---
-
 # 理解容器空间配置器allocator的重要性
 ``` c++
 namespace myspace

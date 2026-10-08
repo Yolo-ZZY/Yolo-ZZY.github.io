@@ -1,12 +1,14 @@
 ---
-title: "模拟实现string类型代码"
+title: 模拟实现string类型代码
 date: 2025-03-21 17:50:14
 updated: 2025-03-21 17:50:14
 categories:
-  - ["编程语言与算法", "C/C++"]
+  - 技术
+  - 开发
+  - C++
 tags:
-  - "string"
-  - "C++运算符重载"
+  - string
+  - C++运算符重载
 description: "模拟实现string类型代码"
 cover: ""
 ---
@@ -114,4 +116,3 @@ int main ()
 
 
 ```
-

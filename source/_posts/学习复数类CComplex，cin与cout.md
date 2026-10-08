@@ -3,13 +3,14 @@ title: "学习复数类CComplex，cin与cout"
 date: 2025-03-21 15:48:21
 updated: 2025-03-21 15:48:21
 categories:
-  - ["编程语言与算法", "C/C++"]
+  - 技术
+  - 开发
+  - C++
 tags:
-  - "C++运算符重载"
+  - C++运算符重载
 description: "cin<<只能输入一段字符串，中间不能有空格 想要一段话，使用cin.getline(指针，大小) 这里指针必须是char 或者getline(cin,sentence)"
 cover: ""
 ---
-
 # 学习复数类CComplex
 ## C++运算符重载：
 使对象的运算表现和编译器内置类型一样

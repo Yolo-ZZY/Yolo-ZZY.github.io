@@ -1,16 +1,17 @@
 ---
-title: "记录claude code安装与ccswitch配置"
+title: 记录claude code安装与ccswitch配置
 date: 2026-05-14 12:00:00
 updated: 2026-05-14 12:00:00
 categories:
-  - ["工具与折腾", "效率工具"]
+  - 技术
+  - AI
+  - AI工具
 tags:
-  - "claude"
-  - "ccswitch"
+  - Claude Code
+  - CCSwitch
 description: "（关于claude code的安装步骤）"
 cover: ""
 ---
-
 # 记录claude code安装与ccswitch配置
 
 ## 1. claude安装

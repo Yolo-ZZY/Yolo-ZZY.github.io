@@ -1,12 +1,13 @@
 ---
-title: "ERPNEXT环境搭建"
+title: ERPNEXT环境搭建
 date: 2025-02-17 16:32:05
 updated: 2025-02-17 16:32:05
 categories:
-  - ["项目与实践", "实习与开发环境"]
+  - 学习与成长
+  - 实习项目
 tags:
-  - "ERPNEXT"
-  - "虚拟机"
+  - ERPNEXT
+  - 虚拟机
 description: "4. 只要主机能够ping通虚拟机，就意味着可以不用再vmware黑框框里操作了 //友情提示不要用校园网nmmp"
 cover: ""
 ---

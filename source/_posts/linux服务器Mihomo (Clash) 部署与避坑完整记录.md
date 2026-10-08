@@ -3,11 +3,13 @@ title: "Linux 服务器 Mihomo (Clash) 部署与避坑完整记录"
 date: 2026-05-16 23:50:06
 updated: 2026-05-16 23:50:06
 categories:
-  - ["工具与折腾", "效率工具"]
+  - 技术
+  - Linux
+  - 服务器
 tags:
-  - "linux"
-  - "服务器"
-  - "网络"
+  - Linux
+  - 服务器
+  - 网络
 description: "在连接服务器之前，先在你的 Windows 电脑桌面上新建一个文件夹（例如叫 mihomofiles），准备好以下 5 个文件："
 cover: ""
 ---

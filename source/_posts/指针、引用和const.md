@@ -3,12 +3,14 @@ title: "指针、引用和const"
 date: 2026-01-09 13:08:10
 updated: 2026-01-09 13:08:10
 categories:
-  - ["编程语言与算法", "C/C++"]
+  - 技术
+  - 开发
+  - C++
 tags:
-  - "C++"
-  - "指针"
-  - "引用"
-  - "const"
+  - C++
+  - 指针
+  - 引用
+  - const
 description: "int a=10; int &nickname=a; nickname就是a的别名，对nickname操作就是对a操作"
 cover: ""
 ---
@@ -92,4 +94,3 @@ int a = 10;
 const int& b = a;//这里b=20报错，a=20可以，相当于b只能指向a那个地址
 cout << b << endl;
 ```
-

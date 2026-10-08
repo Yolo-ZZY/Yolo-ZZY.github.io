@@ -5,12 +5,13 @@
   "scripts": {
     "new": "hexo new draft",
     "dev": "hexo server --draft",
-    "build": "hexo generate",
+    "build": "npm run sync:categories && hexo generate",
     "check": "node tools/validate-posts.cjs",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "publish": "node tools/publish.cjs",
-    "server": "hexo server"
+    "server": "npm run sync:categories && hexo server",
+    "sync:categories": "node tools/sync-categories.cjs"
   },
   "hexo": {
     "version": "8.1.2"

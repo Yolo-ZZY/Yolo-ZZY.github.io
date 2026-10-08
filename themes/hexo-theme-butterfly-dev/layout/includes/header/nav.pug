@@ -1,4 +1,15 @@
 nav#nav
+  - let navBackHref = url_for('/')
+  - let navBackLabel = '主页'
+  if page.category
+    - navBackHref = url_for(`${config.category_dir}/`)
+    - navBackLabel = '分类'
+  else if page.tag
+    - navBackHref = url_for(`${config.tag_dir}/`)
+    - navBackLabel = '标签'
+  else if is_archive() && (page.year || page.month)
+    - navBackHref = url_for(`${config.archive_dir}/`)
+    - navBackLabel = '归档'
   span#blog-info
     a.nav-site-title(href=url_for('/'))
       if theme.nav.logo
@@ -8,6 +19,10 @@ nav#nav
     if globalPageType === 'post'
       a.nav-page-title(href=url_for('/'))
         span.site-name=(page.title || config.title)
+  if !is_home()
+    a.nav-back-button(href=navBackHref title=`返回${navBackLabel}` aria-label=`返回${navBackLabel}`)
+      i.fas.fa-arrow-left
+      span= `返回${navBackLabel}`
   #menus
     if theme.search.use
       #search-button

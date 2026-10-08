@@ -3,12 +3,14 @@ title: "new,malloc,free,delete，引用和指针"
 date: 2025-01-08 15:22:00
 updated: 2025-01-08 15:22:00
 categories:
-  - ["编程语言与算法", "C/C++"]
+  - 技术
+  - 开发
+  - C++
 tags:
-  - "C++"
-  - "C++基础"
-  - "引用"
-  - "指针"
+  - C++
+  - C++基础
+  - 引用
+  - 指针
 description: "malloc和free是c的库函数 new和delete是运算符"
 cover: ""
 ---

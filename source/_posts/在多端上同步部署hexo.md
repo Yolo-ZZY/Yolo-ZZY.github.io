@@ -1,15 +1,16 @@
 ---
-title: "在多端上同步部署hexo"
+title: 在多端上同步部署hexo
 date: 2025-02-16 23:45:39
 updated: 2025-02-16 23:45:39
 categories:
-  - ["项目与实践", "博客搭建"]
+  - 技术
+  - 博客
+  - Hexo
 tags:
-  - "hexo"
+  - Hexo
 description: "参考https://blog.csdn.net/K1052176873/article/details/122879462"
 cover: ""
 ---
-
 # 在多端上同步部署hexo
 参考https://blog.csdn.net/K1052176873/article/details/122879462
 ## 1. 在GitHub上新建分支hexo，且设置为默认
@@ -70,4 +71,3 @@ deploy:
   repo: git@github.com:yolo-zzy/yolo-zzy.github.io.git
   branch: master
 ```
-

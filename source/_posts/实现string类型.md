@@ -1,12 +1,14 @@
 ---
-title: "实现string类型"
+title: 实现string类型
 date: 2025-03-21 15:48:21
 updated: 2025-03-21 15:48:21
 categories:
-  - ["编程语言与算法", "C/C++"]
+  - 技术
+  - 开发
+  - C++
 tags:
-  - "string"
-  - "C++运算符重载"
+  - string
+  - C++运算符重载
 description: "本身没有string只有char，库 实现了一系列操作"
 cover: ""
 ---

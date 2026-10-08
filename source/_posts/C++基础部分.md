@@ -1,16 +1,17 @@
 ---
-title: "C++基础部分"
+title: C++基础部分
 date: 2025-01-07 13:48:00
 updated: 2025-01-07 13:48:00
 categories:
-  - ["编程语言与算法", "C/C++"]
+  - 技术
+  - 开发
+  - C++
 tags:
-  - "C++"
-  - "C++基础"
+  - C++
+  - C++基础
 description: "----- 上述为先 定义 ，后 调用 ；下为先 声明 ，后调用，最后定义（或定义在另一个文件）"
 cover: ""
 ---
-
 ![image-20250107134923183](https://cdn.jsdelivr.net/gh/Yolo-ZZY/Image/image-20250107134923183)
 # 形参带默认值的函数
 
@@ -280,4 +281,3 @@ extern "C"{					//ifdef与endif之间的都看不到，只能看到sum的定义
 
 只要是c++编译器，都内置\_cplusplus这个宏名
 \_FILE_  _LINE\_ 都是宏，为文件名与行数
-

@@ -1,12 +1,14 @@
 ---
-title: "全面掌握const"
+title: 全面掌握const
 date: 2025-02-16 23:44:57
 updated: 2025-02-16 23:44:57
 categories:
-  - ["编程语言与算法", "C/C++"]
+  - 技术
+  - 开发
+  - C++
 tags:
-  - "C++"
-  - "C++基础"
+  - C++
+  - C++基础
 description: "------------- c++的const必须初始化，是常量，不是变量"
 cover: ""
 ---

@@ -1,15 +1,16 @@
 ---
-title: "关于include以及多个文件间声明与调用"
+title: 关于include以及多个文件间声明与调用
 date: 2025-02-16 23:43:23
 updated: 2025-02-16 23:43:23
 categories:
-  - ["编程语言与算法", "C/C++"]
+  - 技术
+  - 开发
+  - C++
 tags:
-  - "C++"
+  - C++
 description: "C++中包含#include存在两种不同的形式，尖括号<>和双引号\"\""
 cover: ""
 ---
-
 # 关于include以及多个文件间声明与调用
 
 C++中包含#include存在两种不同的形式，尖括号<>和双引号""

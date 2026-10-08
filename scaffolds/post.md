@@ -2,10 +2,10 @@
 title: {{ title }}
 date: {{ date }}
 updated: {{ date }}
-categories:
-tags:
+categories: []
+tags: []
 description:
-cover:
+cover: ""
 ---
 
 # 前言

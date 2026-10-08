@@ -1,16 +1,15 @@
 ---
-title: "mysql数据库面试"
+title: mysql数据库面试
 date: 2025-03-13 16:26:30
 updated: 2025-03-13 16:26:30
 categories:
-  - ["求职与面试", "南航面试复习"]
+  - 学习与成长
+  - 面试复习
 tags:
-  - "mysql"
+  - MySQL
 description: "mysql 关系型数据库，类似与一张excel表格 1. 行 对于记录， 列 对于属性"
 cover: ""
 ---
-
-
 mysql 关系型数据库，类似与一张excel表格
 1. 行 对于记录， 列 对于属性
    
@@ -169,4 +168,3 @@ select * from student,teacher where student.id = teacher.tid;
 左外连接  保留整个左表
 
 右外连接  保留整个右表
-

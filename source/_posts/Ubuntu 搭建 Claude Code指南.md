@@ -1,13 +1,17 @@
 ---
-title: "Ubuntu 搭建 Claude Code 指南"
+title: Ubuntu 搭建 Claude Code 指南
 date: 2026-05-17 00:16:47
 updated: 2026-05-17 00:16:47
 categories:
-  - ["工具与折腾", "效率工具"]
+  - 技术
+  - AI
+  - AI工具
 tags:
-  - "linux"
-  - "claude"
-description: "本指南记录了在无图形界面（CLI）的 Ubuntu 系统上，如何利用 DeepSeek 的 Anthropic 兼容协议，完美搭建并驱动 Anthropic 官方命令行 AI 编码助手 Claude Code 的全过程。"
+  - Claude Code
+  - Ubuntu
+  - DeepSeek
+  - AI 编程
+description: "在 Ubuntu 服务器上使用 DeepSeek 的 Anthropic 兼容接口安装并配置 Claude Code。"
 cover: ""
 ---
 # 📝 Linux (Ubuntu) 搭建 Claude Code 官方指南 —— 基于 DeepSeek 后端驱动

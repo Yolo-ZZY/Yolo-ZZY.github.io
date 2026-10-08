@@ -1,0 +1,64 @@
+-
+  const treeData = site.data.categories || {}
+  const allCategories = site.categories ? site.categories.toArray() : []
+  const treeContext = typeof categoryTreeContext === 'undefined' ? 'page' : categoryTreeContext
+  const sameCategoryId = (left, right) => String(left || '') === String(right || '')
+  const findCategory = (name, parentId) => allCategories.find(category => {
+    const hasExpectedParent = parentId
+      ? sameCategoryId(category.parent, parentId)
+      : !category.parent
+    return category.name === name && hasExpectedParent
+  })
+  const fallbackCategoryUrl = names => url_for(`${config.category_dir}/${names.map(encodeURIComponent).join('/')}/`)
+
+mixin renderCategoryTree(nodes, parentId, ancestors)
+  if nodes && typeof nodes === 'object'
+    ul.category-tree-list
+      each children, categoryName in nodes
+        - const category = findCategory(categoryName, parentId)
+        - const categoryCount = category ? category.length : 0
+        if categoryCount > 0
+          - const categoryNames = ancestors.concat(categoryName)
+          - const categoryUrl = category ? url_for(category.path) : fallbackCategoryUrl(categoryNames)
+          - const visibleChildren = children && typeof children === 'object' ? Object.keys(children).filter(childName => { const child = findCategory(childName, category ? category._id : null); return child && child.length > 0 }) : []
+          - const hasChildren = visibleChildren.length > 0
+          - const categoryPosts = category && category.posts ? category.posts.sort('date', -1).toArray() : []
+          - const canExpandPosts = treeContext === 'page' && !hasChildren && categoryPosts.length > 0
+          li.category-tree-item(class=[hasChildren ? 'has-children' : '', canExpandPosts ? 'has-posts' : ''])
+            if hasChildren
+              details
+                summary.category-tree-row.category-tree-toggle
+                  span.category-tree-toggle-label
+                    i.category-tree-node-icon.fas.fa-folder
+                    span.category-tree-name= categoryName
+                    span.category-tree-count= `(${categoryCount})`
+                  a.category-tree-page-link(href=categoryUrl title=`进入“${categoryName}”分类页` aria-label=`进入“${categoryName}”分类页` onclick='event.stopPropagation()')
+                    i.fas.fa-arrow-right
+                +renderCategoryTree(children, category ? category._id : null, categoryNames)
+            else if canExpandPosts
+              details.category-tree-leaf
+                summary.category-tree-row.category-tree-toggle
+                  span.category-tree-toggle-label
+                    i.category-tree-node-icon.fas.fa-folder
+                    span.category-tree-name= categoryName
+                    span.category-tree-count= `(${categoryCount})`
+                  a.category-tree-page-link(href=categoryUrl title=`进入“${categoryName}”分类页` aria-label=`进入“${categoryName}”分类页` onclick='event.stopPropagation()')
+                    i.fas.fa-arrow-right
+                ul.category-tree-post-list
+                  each post in categoryPosts
+                    li.category-tree-post-item
+                      a.category-tree-post-link(href=url_for(post.path))
+                        span.category-tree-post-title= post.title
+                        time.category-tree-post-date(datetime=date_xml(post.date))= date(post.date, 'YYYY-MM-DD')
+            else
+              .category-tree-row
+                a.category-tree-link(href=categoryUrl)
+                  i.category-tree-node-icon.fas.fa-folder
+                  span.category-tree-name= categoryName
+                  span.category-tree-count= `(${categoryCount})`
+
+.category-tree(class=`category-tree--${treeContext}`)
+  if Object.keys(treeData).length
+    +renderCategoryTree(treeData, null, [])
+  else
+    p.category-tree-empty 暂无分类

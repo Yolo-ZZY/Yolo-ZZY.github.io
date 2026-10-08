@@ -1,17 +1,18 @@
 ---
-title: "nginx配置ssl"
+title: nginx配置ssl
 date: 2025-06-02 22:48:25
 updated: 2025-06-02 22:48:25
 categories:
-  - ["项目与实践", "博客搭建"]
+  - 技术
+  - 博客
+  - 部署运维
 tags:
-  - "nginx"
-  - "ssl"
-  - "linux"
+  - Nginx
+  - SSL
+  - Linux
 description: "参考博客 https://www.cnblogs.com/ambition26/p/14077773.html"
 cover: ""
 ---
-
 # nginx配置ssl
 参考博客
 > https://www.cnblogs.com/ambition26/p/14077773.html

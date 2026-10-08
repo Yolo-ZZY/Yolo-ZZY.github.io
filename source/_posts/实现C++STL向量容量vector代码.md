@@ -1,13 +1,15 @@
 ---
-title: "C++STL向量容量vector代码"
+title: C++STL向量容量vector代码
 date: 2025-03-07 19:05:39
 updated: 2025-03-07 19:05:39
 categories:
-  - ["编程语言与算法", "C/C++"]
+  - 技术
+  - 开发
+  - C++
 tags:
-  - "C++"
-  - "STL"
-  - "C++模板编程"
+  - C++
+  - STL
+  - C++模板编程
 description: "1. 通过 .cstr()方法获得的 C 风格字符串会以 \\0结尾。 2. 许多字符串处理函数（如 strlen、strcpy）依赖 \\0来判断字符串结束。 3. 字符型数组char[]由于最后可能不是\\0，因此不一定可以作为字符串"
 cover: ""
 ---
@@ -250,4 +252,3 @@ int main()
 
 
 此时我们实现的vector与库的vector区别在于：缺少容器的空间配置器
-

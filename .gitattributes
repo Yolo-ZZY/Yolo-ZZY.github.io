@@ -1,0 +1,3 @@
+# Markdown 文件一律以 LF 检出：帖子校验（tools/validate-posts.cjs）要求 LF 行尾，
+# 避免 core.autocrlf=true 的机器（如 Windows）clone 后 .md 变成 CRLF 导致校验失败
+*.md text eol=lf
